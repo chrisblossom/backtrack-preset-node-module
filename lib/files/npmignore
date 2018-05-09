@@ -1,0 +1,32 @@
+# This file is managed by backtrack
+#
+# DO NOT MODIFY
+
+node_modules
+.idea
+.vscode
+.DS_Store
+*.swp
+*.log
+.env
+*.ignore
+.git
+
+.gitignore
+.babelrc
+.babelrc.js
+.eslintignore
+.eslintrc.js
+.prettierignore
+.prettierrc.js
+.backtrack-stats.json
+.backtrackrc.js
+backtrack.config.js
+jest.config.js
+wallaby.config.js
+
+.circleci
+.appveyor.yml
+.travis.yml
+
+src

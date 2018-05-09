@@ -1,0 +1,41 @@
+{
+    "fileManager": {
+        "directories": [
+            "lib"
+        ],
+        "files": {
+            ".editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
+            ".eslintignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
+            ".eslintrc.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
+            ".gitignore": "ff4f8f1737233f097f0ba0ada7816ff5ee365dfef43bca978b5e79a97ef19e74",
+            ".npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
+            ".prettierignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
+            ".prettierrc.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
+            ".yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3"
+        }
+    },
+    "packageJson": {
+        "engines": {
+            "node": ">=6.9.0",
+            "npm": ">=3.10.10",
+            "yarn": ">=1.6.0"
+        },
+        "files": [
+            "lib/"
+        ],
+        "lint-staged": {
+            "*.{js,md,json}": [
+                "prettier --write",
+                "git add"
+            ]
+        },
+        "scripts": {
+            "format": "backtrack format",
+            "lint": "backtrack lint",
+            "lint.fix": "backtrack lint.fix",
+            "precommit": "lint-staged",
+            "prepublishOnly": "npm run lint",
+            "prepush": "npm run lint"
+        }
+    }
+}
