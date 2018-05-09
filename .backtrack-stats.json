@@ -35,7 +35,8 @@
             "lint.fix": "backtrack lint.fix",
             "precommit": "lint-staged",
             "prepublishOnly": "npm run lint",
-            "prepush": "npm run lint"
+            "prepush": "npm run lint",
+            "test": null
         }
     }
 }

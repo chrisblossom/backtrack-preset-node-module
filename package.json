@@ -1,6 +1,6 @@
 {
   "name": "@backtrack/preset-node-module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "keywords": [],
   "license": "ISC",
@@ -29,15 +29,17 @@
     ]
   },
   "backtrack": {
-    "presets": ["@backtrack/preset"]
+    "presets": [
+      "@backtrack/preset"
+    ]
   },
   "devDependencies": {
-    "@backtrack/core": "0.0.6",
-    "@backtrack/preset-preset": "0.0.1"
+    "@backtrack/core": "^0.1.1",
+    "@backtrack/preset-preset": "^0.1.0"
   },
   "dependencies": {
-    "@backtrack/preset-jest": "^0.0.1",
-    "@backtrack/preset-style": "^0.0.1",
+    "@backtrack/preset-jest": "^0.1.0",
+    "@backtrack/preset-style": "^0.1.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-dynamic-import-node": "^1.2.0",
