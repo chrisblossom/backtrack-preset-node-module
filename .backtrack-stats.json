@@ -1,7 +1,7 @@
 {
     "fileManager": {
         "directories": [
-            "lib"
+            "lib/files"
         ],
         "files": {
             ".editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
@@ -11,7 +11,10 @@
             ".npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
             ".prettierignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
             ".prettierrc.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
-            ".yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3"
+            ".yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3",
+            "CHANGELOG.md": "f55181dcff3c688e1b0b62f38b6e3187de326c22b4cc1eca3642bf63d6ea2552",
+            "README.md": "03d6a41f992425a885146ac0c18c4ca581cd691fa55f7b20c7359263a8bedc2f",
+            "lib/preset-node-module.js": "29e5bf2ab10c88112030c2ddfe8cbd777a02361262822c2ff74b4bd799268c7a"
         }
     },
     "packageJson": {
@@ -29,6 +32,7 @@
                 "git add"
             ]
         },
+        "main": "lib/preset-node-module.js",
         "scripts": {
             "format": "backtrack format",
             "lint": "backtrack lint",
