@@ -9,10 +9,8 @@
 ## Features
 
 *   [`babel`](https://babeljs.io/) with [`babel-preset-env`](https://babeljs.io/docs/plugins/preset-env/) targeting [`node v6.9.0`](./files/babelrc.js)
-
 *   [`flow`](https://flow.org/), [`eslint`](https://eslint.org/), and [`prettier`](https://prettier.io)
-*   `package.json` scripts: `clean`, `build`, and `dev`
-
+*   `package.json` scripts `build` and `dev`
 *   `prepush` and `prepublish` `git hooks`
 
 ## Installation
