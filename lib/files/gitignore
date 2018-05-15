@@ -15,5 +15,7 @@ dist
 .idea
 .vscode
 .cache
+package-lock.json
+yarn.lock
 !**/__sandbox__/**/*
 **/__sandbox__/**/.DS_Store
