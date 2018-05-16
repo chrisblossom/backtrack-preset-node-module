@@ -1,20 +1,26 @@
 {
     "fileManager": {
         "directories": [
+            ".circleci",
             "lib/files"
         ],
         "files": {
+            ".circleci/config.yml": "2bfa496bc22656ba584622896cbcc2fa55fc64737cf31d23606038d64f156b7b",
             ".editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
             ".eslintignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
             ".eslintrc.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
-            ".gitignore": "ff4f8f1737233f097f0ba0ada7816ff5ee365dfef43bca978b5e79a97ef19e74",
+            ".gitignore": "c204ca8726ae7f7e0aedcd854a49064fd5a2385de43318f58e8cd70e7dd5adbd",
             ".npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
             ".prettierignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
             ".prettierrc.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
             ".yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3",
             "CHANGELOG.md": "f55181dcff3c688e1b0b62f38b6e3187de326c22b4cc1eca3642bf63d6ea2552",
-            "README.md": "03d6a41f992425a885146ac0c18c4ca581cd691fa55f7b20c7359263a8bedc2f",
-            "lib/preset-node-module.js": "29e5bf2ab10c88112030c2ddfe8cbd777a02361262822c2ff74b4bd799268c7a"
+            "README.md": "4c36d57fc4cee53b1354e999e268f78be3bf06278fb46f37a74414dc34385521",
+            "appveyor.yml": "f6fc53987d51355dcbb95ea36a3da2db56666cf2a4433bb515a01cc1c1aebf8c",
+            "jest.config.js": "2dfc22f99102a3d4d2335ad31b24e0902a3b81348aa74acf270d9c88ed0a2bf3",
+            "lib/preset-node-module.js": "29e5bf2ab10c88112030c2ddfe8cbd777a02361262822c2ff74b4bd799268c7a",
+            "lib/preset-node-module.test.js": "0d3a2210e1d0ba40c8d16cc9df838128652508d078aa9b03b03079cbac7fc323",
+            "wallaby.config.js": "8f32230dd610bb00d4e67a530e55b6c3271dfd2e4143fc32b066fc97bc88a5fc"
         }
     },
     "packageJson": {
@@ -40,7 +46,10 @@
             "precommit": "backtrack precommit",
             "prepublishOnly": "backtrack prepublishOnly",
             "prepush": "backtrack prepush",
-            "test": null
+            "test": "backtrack test",
+            "test.ci": "backtrack test.ci",
+            "test.update": "backtrack test.update",
+            "test.watch": "backtrack test.watch"
         }
     }
 }
