@@ -33,7 +33,7 @@
     "test": "backtrack test",
     "test.ci": "backtrack test.ci",
     "test.update": "backtrack test.update",
-    "test.watch": "backtrack test.watch"
+    "test.watch": "jest --watch"
   },
   "lint-staged": {
     "*.{js,md,json}": [
@@ -42,11 +42,11 @@
     ]
   },
   "devDependencies": {
-    "@backtrack/core": "^0.1.14",
-    "@backtrack/preset-preset": "^0.1.8"
+    "@backtrack/core": "^0.1.15",
+    "@backtrack/preset-preset": "^0.1.9"
   },
   "dependencies": {
-    "@backtrack/preset-jest": "^0.1.11",
+    "@backtrack/preset-jest": "^0.1.12",
     "@backtrack/preset-style": "^0.1.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",

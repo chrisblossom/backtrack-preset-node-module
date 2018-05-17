@@ -55,6 +55,23 @@ const wallaby = (wallabyConfig) => {
 
             setup: (setupConfig) => {
                 /**
+                 * link node_modules inside wallaby's temp dir
+                 *
+                 * https://github.com/wallabyjs/public/issues/1663#issuecomment-389717074
+                 */
+                const fs = require('fs');
+                const path = require('path');
+                const modulesLink = path.join(
+                    wallaby.projectCacheDir,
+                    'node_modules'
+                );
+                if (fs.existsSync(modulesLink) === false)
+                    fs.symlinkSync(
+                        path.join(wallaby.localProjectDir, 'node_modules'),
+                        modulesLink,
+                        'dir'
+                    );
+                /**
                  * Set to project local path so backtrack can correctly resolve modules
                  * https://github.com/wallabyjs/public/issues/1552#issuecomment-372002860
                  */

@@ -118,7 +118,7 @@ Object {
         "appveyor.yml": "f6fc53987d51355dcbb95ea36a3da2db56666cf2a4433bb515a01cc1c1aebf8c",
         "jest.config.js": "2dfc22f99102a3d4d2335ad31b24e0902a3b81348aa74acf270d9c88ed0a2bf3",
         "src/preset-node-module.js": "",
-        "wallaby.config.js": "8f32230dd610bb00d4e67a530e55b6c3271dfd2e4143fc32b066fc97bc88a5fc",
+        "wallaby.config.js": "b79a89efd0484c2aba8477197056e4ae331dc6a0d533e050edd99d89630cb78f",
       },
       "ignoreUpdates": Object {
         ".babelrc.js": false,
@@ -225,6 +225,11 @@ Object {
       },
     },
     Object {
+      "scripts": Object {
+        "test.watch": "jest --watch",
+      },
+    },
+    Object {
       "babel": Object {
         "presets": Array [
           "./.babelrc.js",
@@ -270,9 +275,6 @@ Object {
   ],
   "test.update": Array [
     "jest --updateSnapshot",
-  ],
-  "test.watch": Array [
-    "jest --watch",
   ],
 }
 `;
@@ -382,7 +384,7 @@ Object {
         "appveyor.yml": "f6fc53987d51355dcbb95ea36a3da2db56666cf2a4433bb515a01cc1c1aebf8c",
         "jest.config.js": "2dfc22f99102a3d4d2335ad31b24e0902a3b81348aa74acf270d9c88ed0a2bf3",
         "src/preset-node-module.js": "",
-        "wallaby.config.js": "8f32230dd610bb00d4e67a530e55b6c3271dfd2e4143fc32b066fc97bc88a5fc",
+        "wallaby.config.js": "b79a89efd0484c2aba8477197056e4ae331dc6a0d533e050edd99d89630cb78f",
       },
       "ignoreUpdates": Object {
         ".babelrc.js": false,
@@ -482,6 +484,11 @@ Object {
       },
     },
     Object {
+      "scripts": Object {
+        "test.watch": "jest --watch",
+      },
+    },
+    Object {
       "babel": Object {
         "presets": Array [
           "./.babelrc.js",
@@ -526,9 +533,6 @@ Object {
   ],
   "test.update": Array [
     "jest --updateSnapshot",
-  ],
-  "test.watch": Array [
-    "jest --watch",
   ],
 }
 `;

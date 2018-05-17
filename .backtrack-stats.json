@@ -15,12 +15,12 @@
             ".prettierrc.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
             ".yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3",
             "CHANGELOG.md": "f55181dcff3c688e1b0b62f38b6e3187de326c22b4cc1eca3642bf63d6ea2552",
-            "README.md": "4c36d57fc4cee53b1354e999e268f78be3bf06278fb46f37a74414dc34385521",
+            "README.md": "7963a00147194f2b11715811c254a204471917b68397d82cd977397c0ea77816",
             "appveyor.yml": "f6fc53987d51355dcbb95ea36a3da2db56666cf2a4433bb515a01cc1c1aebf8c",
             "jest.config.js": "2dfc22f99102a3d4d2335ad31b24e0902a3b81348aa74acf270d9c88ed0a2bf3",
             "lib/preset-node-module.js": "29e5bf2ab10c88112030c2ddfe8cbd777a02361262822c2ff74b4bd799268c7a",
             "lib/preset-node-module.test.js": "0d3a2210e1d0ba40c8d16cc9df838128652508d078aa9b03b03079cbac7fc323",
-            "wallaby.config.js": "8f32230dd610bb00d4e67a530e55b6c3271dfd2e4143fc32b066fc97bc88a5fc"
+            "wallaby.config.js": "b79a89efd0484c2aba8477197056e4ae331dc6a0d533e050edd99d89630cb78f"
         }
     },
     "packageJson": {
@@ -49,7 +49,7 @@
             "test": "backtrack test",
             "test.ci": "backtrack test.ci",
             "test.update": "backtrack test.update",
-            "test.watch": "backtrack test.watch"
+            "test.watch": "jest --watch"
         }
     }
 }
