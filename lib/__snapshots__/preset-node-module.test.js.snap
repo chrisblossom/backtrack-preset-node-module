@@ -114,7 +114,7 @@ Object {
         ".prettierrc.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
         ".yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3",
         "CHANGELOG.md": "f55181dcff3c688e1b0b62f38b6e3187de326c22b4cc1eca3642bf63d6ea2552",
-        "README.md": "c418758ea8d8da949bc05cbcb951a63ee7bf1d1e4f984244ee451e7831cb3c83",
+        "README.md": "d41872c0378b1d7d8e8b65a92933e5875ee4c926cd5edd2664c5ec9e69086ced",
         "appveyor.yml": "f6fc53987d51355dcbb95ea36a3da2db56666cf2a4433bb515a01cc1c1aebf8c",
         "jest.config.js": "2dfc22f99102a3d4d2335ad31b24e0902a3b81348aa74acf270d9c88ed0a2bf3",
         "src/preset-node-module.js": "",
