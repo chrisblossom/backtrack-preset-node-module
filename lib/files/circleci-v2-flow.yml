@@ -30,6 +30,7 @@ jobs:
       # Only run test.ci on node6 until parallel builds are fixed
       - run: npm run build
       - run: npm run lint
+      - run: npm run flow
       - run: npm run test
   test-node8:
     docker:
@@ -50,6 +51,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run build
       - run: npm run lint
+      - run: npm run flow
       - run: npm run test.ci
   test-node10:
     docker:
@@ -70,6 +72,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run build
       - run: npm run lint
+      - run: npm run flow
       - run: npm run test
 
 

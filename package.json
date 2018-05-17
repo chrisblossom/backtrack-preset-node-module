@@ -41,13 +41,8 @@
       "git add"
     ]
   },
-  "backtrack": {
-    "presets": [
-      "@backtrack/preset"
-    ]
-  },
   "devDependencies": {
-    "@backtrack/core": "^0.1.13",
+    "@backtrack/core": "^0.1.14",
     "@backtrack/preset-preset": "^0.1.8"
   },
   "dependencies": {

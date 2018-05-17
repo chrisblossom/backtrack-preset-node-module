@@ -32,3 +32,25 @@ module.exports = {
     presets: ['@backtrack/node-module'],
 };
 ```
+
+## Options
+
+```js
+'use strict';
+
+module.exports = {
+    presets: [
+        [
+            '@backtrack/node-module',
+            {
+                /**
+                 * Disable flow
+                 *
+                 * default: true
+                 */
+                flow: false,
+            },
+        ],
+    ],
+};
+```
