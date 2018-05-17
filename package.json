@@ -42,12 +42,12 @@
     ]
   },
   "devDependencies": {
-    "@backtrack/core": "^0.1.15",
-    "@backtrack/preset-preset": "^0.1.9"
+    "@backtrack/core": "^0.1.17",
+    "@backtrack/preset-preset": "^0.1.10"
   },
   "dependencies": {
-    "@backtrack/preset-jest": "^0.1.12",
-    "@backtrack/preset-style": "^0.1.4",
+    "@backtrack/preset-jest": "^0.1.13",
+    "@backtrack/preset-style": "^0.1.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-dynamic-import-node": "^1.2.0",
