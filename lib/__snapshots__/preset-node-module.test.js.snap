@@ -186,7 +186,7 @@ Object {
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babelrc-flow.js": "d52f4b8d81c81375ed18c935564bde87e722ab40e59839bc81e2b9ae43dc9e59",
+        "lib/files/babelrc-flow.js": "31340d9716a55146d1d2f2573bb6b4a67c4957774fb1c7175397966be7b0e10f",
         "lib/files/circleci-v2-flow.yml": "ad6e75f33b001c5368558de372f6d5d814184c2fa4c9953f075a43c10e18dccf",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/flowconfig": "a097b005abea75e2e62d08a1cdbf12263aa9e5c220be921f7992a1cbc1e1bd18",
@@ -449,7 +449,7 @@ Object {
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babelrc.js": "3e12ffb520a609f5e623246601a1897101f8568409e796f432862cac01c6b974",
+        "lib/files/babelrc.js": "2ba1900d7d5148a5834dc7863dbc26ff75e03dcf503c1ba973361e865fe6f6d3",
         "lib/files/circleci-v2.yml": "b643a14c00e8a75e4b5ff4e6f5e57e01c7573337e531843633797055ecc5fe80",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
