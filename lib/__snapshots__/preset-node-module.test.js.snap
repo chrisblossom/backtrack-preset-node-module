@@ -11,7 +11,7 @@ Object {
       },
       Object {
         "name": "flow-copy-source",
-        "task": "flow-copy-source --ignore **/*.test.js --ignore **/__sandbox__/**/* src dist",
+        "task": "flow-copy-source --ignore \\"**/*.test.js\\" --ignore \\"**/__sandbox__/**/*\\" src dist",
       },
     ],
   ],
@@ -38,7 +38,7 @@ Object {
       },
       Object {
         "name": "flow-copy-source",
-        "task": "flow-copy-source -w --ignore **/*.test.js --ignore **/__sandbox__/**/* src dist",
+        "task": "flow-copy-source -w --ignore \\"**/*.test.js\\" --ignore \\"**/__sandbox__/**/*\\" src dist",
       },
     ],
   ],
