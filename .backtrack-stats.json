@@ -5,7 +5,7 @@
             "lib/files"
         ],
         "files": {
-            ".circleci/config.yml": "2bfa496bc22656ba584622896cbcc2fa55fc64737cf31d23606038d64f156b7b",
+            ".circleci/config.yml": "3b7696d7b955ebd4ac0f5eeacfff227acea15301b6e450b111677d32411b2a8b",
             ".editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
             ".eslintignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
             ".eslintrc.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
@@ -16,7 +16,7 @@
             ".yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3",
             "CHANGELOG.md": "ignoreUpdates",
             "README.md": "ignoreUpdates",
-            "appveyor.yml": "f6fc53987d51355dcbb95ea36a3da2db56666cf2a4433bb515a01cc1c1aebf8c",
+            "appveyor.yml": "9d33ff9a3d71fe4027204552cb66e29277062e5fd12d2e9f334cc07d8f8fd30a",
             "jest.config.js": "2dfc22f99102a3d4d2335ad31b24e0902a3b81348aa74acf270d9c88ed0a2bf3",
             "lib/preset-node-module.js": "ignoreUpdates",
             "lib/preset-node-module.test.js": "ignoreUpdates",
@@ -48,7 +48,8 @@
             "prepush": "backtrack prepush",
             "test": "backtrack test",
             "test.ci": "backtrack test.ci",
-            "test.update": "backtrack test.update",
+            "test.ci-pretest": "backtrack test.ci-pretest",
+            "test.update": "jest --updateSnapshot",
             "test.watch": "jest --watch"
         }
     }
