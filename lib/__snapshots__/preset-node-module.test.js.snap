@@ -278,7 +278,10 @@ Object {
     [Function noop],
     "backtrack build",
     "backtrack lint",
-    "<PROJECT_ROOT>/lib/ci-run-flow.js",
+    Object {
+      "name": "flow ci",
+      "task": "<PROJECT_ROOT>/lib/ci-run-flow.js",
+    },
   ],
 }
 `;
