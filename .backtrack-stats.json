@@ -16,7 +16,7 @@
             ".yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3",
             "CHANGELOG.md": "ignoreUpdates",
             "README.md": "ignoreUpdates",
-            "appveyor.yml": "9d33ff9a3d71fe4027204552cb66e29277062e5fd12d2e9f334cc07d8f8fd30a",
+            "appveyor.yml": "e26fc69a9c740e6fe6267ea2da435aa54c83a110eface66642470dc2e8336713",
             "jest.config.js": "2dfc22f99102a3d4d2335ad31b24e0902a3b81348aa74acf270d9c88ed0a2bf3",
             "lib/preset-node-module.js": "ignoreUpdates",
             "lib/preset-node-module.test.js": "ignoreUpdates",

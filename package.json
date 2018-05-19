@@ -44,10 +44,10 @@
   },
   "devDependencies": {
     "@backtrack/core": "^0.1.17",
-    "@backtrack/preset-preset": "^0.1.14"
+    "@backtrack/preset-preset": "^0.1.15"
   },
   "dependencies": {
-    "@backtrack/preset-jest": "^0.1.18",
+    "@backtrack/preset-jest": "^0.1.20",
     "@backtrack/preset-style": "^0.1.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
