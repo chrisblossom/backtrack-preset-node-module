@@ -13,10 +13,10 @@ GENERAL-PACKAGE-DESCRIPTION-HERE
 
 ## Features
 
-*   ITEM 1
-*   ITEM 2
-*   ITEM 3
-*   ...
+-   ITEM 1
+-   ITEM 2
+-   ITEM 3
+-   ...
 
 ## Installation
 

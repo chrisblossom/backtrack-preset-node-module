@@ -11,11 +11,11 @@
 
 ## Features
 
-*   [`babel`](https://babeljs.io/) with [`babel-preset-env`](https://babeljs.io/docs/plugins/preset-env/) targeting [`node v6.9.0`](./lib/files/babelrc.js)
-*   [`flow`](https://flow.org/), [`eslint`](https://eslint.org/), and [`prettier`](https://prettier.io)
-*   [`jest`](https://facebook.github.io/jest/) with [CircleCI](https://circleci.com/) and [AppVeyor](https://www.appveyor.com/)
-*   `package.json` scripts `build` and `dev`
-*   `prepush` and `prepublish` `git hooks`
+-   [`babel`](https://babeljs.io/) with [`babel-preset-env`](https://babeljs.io/docs/plugins/preset-env/) targeting [`node v6.9.0`](./lib/files/babelrc.js)
+-   [`flow`](https://flow.org/), [`eslint`](https://eslint.org/), and [`prettier`](https://prettier.io)
+-   [`jest`](https://facebook.github.io/jest/) with [CircleCI](https://circleci.com/) and [AppVeyor](https://www.appveyor.com/)
+-   `package.json` scripts `build` and `dev`
+-   `prepush` and `prepublish` `git hooks`
 
 ## Installation
 
