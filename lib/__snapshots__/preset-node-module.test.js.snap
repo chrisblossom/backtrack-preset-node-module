@@ -19,7 +19,10 @@ Object {
     Array [
       "backtrack lint",
       "backtrack test",
-      "backtrack flow",
+      Object {
+        "name": "flow",
+        "task": "flow check",
+      },
     ],
   ],
   "clean": Object {
@@ -262,8 +265,8 @@ Object {
   "test.ci": Array [
     "jest --passWithNoTests --coverage",
     Object {
-      "name": "coveralls",
-      "task": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/send-coverage.js",
+      "name": "codecov",
+      "task": "codecov",
     },
   ],
   "test.ci-pretest": Array [
@@ -512,8 +515,8 @@ Object {
   "test.ci": Array [
     "jest --passWithNoTests --coverage",
     Object {
-      "name": "coveralls",
-      "task": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/send-coverage.js",
+      "name": "codecov",
+      "task": "codecov",
     },
   ],
   "test.ci-pretest": Array [

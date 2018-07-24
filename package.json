@@ -44,20 +44,20 @@
   },
   "devDependencies": {
     "@backtrack/core": "^0.1.18",
-    "@backtrack/preset-preset": "^0.2.1"
+    "@backtrack/preset-preset": "^0.3.0"
   },
   "dependencies": {
-    "@backtrack/preset-jest": "^0.2.0",
+    "@backtrack/preset-jest": "^0.3.0",
     "@backtrack/preset-style": "^0.1.6",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-dynamic-import-node": "^2.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-flow": "^6.23.0",
-    "flow-bin": "^0.73.0",
-    "flow-copy-source": "^1.3.0",
-    "read-pkg-up": "^3.0.0"
+    "flow-bin": "^0.77.0",
+    "flow-copy-source": "^2.0.2",
+    "read-pkg-up": "^4.0.0"
   }
 }
