@@ -26,12 +26,12 @@
     "packageJson": {
         "engines": {
             "node": ">=6.9.0",
-            "npm": ">=3.10.10",
-            "yarn": ">=1.6.0"
+            "npm": ">=3.10.10"
         },
         "files": [
             "lib/"
         ],
+        "license": "MIT",
         "lint-staged": {
             "*.{js,md,json}": [
                 "prettier --write",

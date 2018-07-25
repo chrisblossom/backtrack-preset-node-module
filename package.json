@@ -10,14 +10,13 @@
     "babel",
     "flow"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "repository": "chrisblossom/backtrack-preset-node-module",
   "homepage": "https://github.com/chrisblossom/backtrack-preset-node-module",
   "author": "Chris Blossom",
   "engines": {
     "node": ">=6.9.0",
-    "npm": ">=3.10.10",
-    "yarn": ">=1.6.0"
+    "npm": ">=3.10.10"
   },
   "files": [
     "lib/"
@@ -43,12 +42,12 @@
     ]
   },
   "devDependencies": {
-    "@backtrack/core": "^0.1.18",
-    "@backtrack/preset-preset": "^0.3.0"
+    "@backtrack/core": "^0.1.20",
+    "@backtrack/preset-preset": "^0.3.2"
   },
   "dependencies": {
-    "@backtrack/preset-jest": "^0.3.0",
-    "@backtrack/preset-style": "^0.1.6",
+    "@backtrack/preset-jest": "^0.3.3",
+    "@backtrack/preset-style": "^0.1.9",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-dynamic-import-node": "^2.0.0",
