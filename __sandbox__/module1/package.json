@@ -1,0 +1,51 @@
+{
+  "name": "module1",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "engines": {
+    "node": ">=6.9.0",
+    "npm": ">=3.10.10"
+  },
+  "files": [
+    "dist/",
+    "flow-typed/"
+  ],
+  "main": "dist/module1.js",
+  "scripts": {
+    "build": "backtrack build --production",
+    "clean": "backtrack clean",
+    "dev": "backtrack dev --development",
+    "flow": "backtrack flow",
+    "format": "backtrack format",
+    "lint": "backtrack lint",
+    "lint.fix": "backtrack lint.fix",
+    "precommit": "backtrack precommit",
+    "prepublishOnly": "backtrack prepublishOnly",
+    "prepush": "backtrack prepush",
+    "test": "backtrack test",
+    "test.ci": "backtrack test.ci",
+    "test.ci-pretest": "backtrack test.ci-pretest",
+    "test.update": "jest --updateSnapshot",
+    "test.watch": "jest --watch"
+  },
+  "lint-staged": {
+    "*.{js,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "./.babelrc.js"
+    ]
+  },
+  "devDependencies": {
+    "@backtrack/core": "^0.1.20"
+  },
+  "dependencies": {
+    "@backtrack/preset-node-app": "file:../.."
+  }
+}

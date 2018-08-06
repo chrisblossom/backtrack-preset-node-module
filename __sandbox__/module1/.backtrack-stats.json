@@ -2,14 +2,18 @@
     "fileManager": {
         "directories": [
             ".circleci",
-            "lib/files"
+            "dist",
+            "flow-typed",
+            "src"
         ],
         "files": {
+            ".babelrc.js": "31340d9716a55146d1d2f2573bb6b4a67c4957774fb1c7175397966be7b0e10f",
             ".circleci/config.yml": "d7ada4fec94d99d14f1cfc79160392b0c5f0499f9dd9ae49fd2fd5bc0736bb4c",
             ".editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
             ".eslintignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
             ".eslintrc.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
-            ".gitignore": "c204ca8726ae7f7e0aedcd854a49064fd5a2385de43318f58e8cd70e7dd5adbd",
+            ".flowconfig": "a097b005abea75e2e62d08a1cdbf12263aa9e5c220be921f7992a1cbc1e1bd18",
+            ".gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
             ".lintstagedrc.js": "c8dd8df94d9c8de4503bc1ab4b4ea12c7450d76ebbd50c9b4c3c7975609e28da",
             ".npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
             ".prettierignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
@@ -18,22 +22,32 @@
             "CHANGELOG.md": "ignoreUpdates",
             "README.md": "ignoreUpdates",
             "appveyor.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
+            "flow-typed/jest.js": "dfb57c1db3a0b01a101ca14855be030bcc566be90bf00110f2fa16b42e92158d",
             "jest.config.js": "322dd136d43514064c38fdf8cd999d6511d83af8efbb35d8d355a3f35937c6c4",
-            "lib/preset-node-module.js": "ignoreUpdates",
-            "lib/preset-node-module.test.js": "ignoreUpdates",
-            "wallaby.config.js": "b79a89efd0484c2aba8477197056e4ae331dc6a0d533e050edd99d89630cb78f"
+            "src/module1.js": "ignoreUpdates",
+            "wallaby.config.js": "bfd3a73af1c8ecd93d812d70e4e599406f14eda36920955df69a4109a3a2ed2e"
         }
     },
     "packageJson": {
+        "babel": {
+            "presets": [
+                "./.babelrc.js"
+            ]
+        },
         "engines": {
             "node": ">=6.9.0",
             "npm": ">=3.10.10"
         },
         "files": [
-            "lib/"
+            "dist/",
+            "flow-typed/"
         ],
-        "main": "lib/preset-node-module.js",
+        "main": "dist/module1.js",
         "scripts": {
+            "build": "backtrack build --production",
+            "clean": "backtrack clean",
+            "dev": "backtrack dev --development",
+            "flow": "backtrack flow",
             "format": "backtrack format",
             "lint": "backtrack lint",
             "lint.fix": "backtrack lint.fix",

@@ -7,21 +7,11 @@ Object {
     Array [
       Object {
         "name": "babel",
-        "task": "babel src -d dist --ignore test.js,__sandbox__/ --source-maps",
+        "task": [Function task],
       },
       Object {
         "name": "flow-copy-source",
-        "task": "flow-copy-source --ignore \\"**/*.test.js\\" --ignore \\"**/__sandbox__/**/*\\" src dist",
-      },
-    ],
-  ],
-  "check-all": Array [
-    Array [
-      "backtrack lint",
-      "backtrack test",
-      Object {
-        "name": "flow",
-        "task": "flow check",
+        "task": [Function task],
       },
     ],
   ],
@@ -37,13 +27,14 @@ Object {
     Array [
       Object {
         "name": "babel",
-        "task": "babel -w src/ -d dist/ --ignore test.js,__sandbox__/ --source-maps",
+        "task": [Function task],
       },
       Object {
         "name": "flow-copy-source",
-        "task": "flow-copy-source -w --ignore \\"**/*.test.js\\" --ignore \\"**/__sandbox__/**/*\\" src dist",
+        "task": [Function task],
       },
     ],
+    [Function anonymous],
   ],
   "files": Object {
     "dest": Object {
@@ -55,6 +46,7 @@ Object {
         ".eslintrc.js": "<PROJECT_ROOT>/.eslintrc.js",
         ".flowconfig": "<PROJECT_ROOT>/.flowconfig",
         ".gitignore": "<PROJECT_ROOT>/.gitignore",
+        ".lintstagedrc.js": "<PROJECT_ROOT>/.lintstagedrc.js",
         ".npmrc": "<PROJECT_ROOT>/.npmrc",
         ".prettierignore": "<PROJECT_ROOT>/.prettierignore",
         ".prettierrc.js": "<PROJECT_ROOT>/.prettierrc.js",
@@ -75,6 +67,7 @@ Object {
         ".eslintrc.js": false,
         ".flowconfig": false,
         ".gitignore": false,
+        ".lintstagedrc.js": false,
         ".npmrc": false,
         ".prettierignore": false,
         ".prettierrc.js": false,
@@ -92,9 +85,10 @@ Object {
         ".eslintignore",
         ".prettierrc.js",
         ".prettierignore",
-        "jest.config.js",
+        ".lintstagedrc.js",
         "wallaby.config.js",
         ".circleci/config.yml",
+        "jest.config.js",
         "appveyor.yml",
         "CHANGELOG.md",
         "README.md",
@@ -115,6 +109,7 @@ Object {
         ".eslintrc.js": false,
         ".flowconfig": false,
         ".gitignore": false,
+        ".lintstagedrc.js": false,
         ".npmrc": false,
         ".prettierignore": false,
         ".prettierrc.js": false,
@@ -146,12 +141,13 @@ Object {
         "lib/files/npmrc": "<PROJECT_ROOT>/lib/files/npmrc",
         "lib/files/package-entry-flow.js": "<PROJECT_ROOT>/lib/files/package-entry-flow.js",
         "lib/files/yarnrc": "<PROJECT_ROOT>/lib/files/yarnrc",
-        "node_modules/@backtrack/preset-jest/lib/files/appveyor.yml": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/appveyor.yml",
-        "node_modules/@backtrack/preset-jest/lib/files/circleci-v2.yml": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/circleci-v2.yml",
-        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/jest.js",
+        "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/jest-library.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/jest-library.js",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/wallaby.js",
         "node_modules/@backtrack/preset-style/lib/files/eslint.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/eslint.js",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/ignore",
+        "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
         "node_modules/@backtrack/preset-style/lib/files/prettier.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/prettier.js",
       },
       "files": Array [
@@ -159,10 +155,11 @@ Object {
         "node_modules/@backtrack/preset-style/lib/files/ignore",
         "node_modules/@backtrack/preset-style/lib/files/prettier.js",
         "node_modules/@backtrack/preset-style/lib/files/ignore",
-        "node_modules/@backtrack/preset-jest/lib/files/jest.js",
+        "node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js",
-        "node_modules/@backtrack/preset-jest/lib/files/circleci-v2.yml",
-        "node_modules/@backtrack/preset-jest/lib/files/appveyor.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/jest-library.js",
+        "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml",
         "lib/files/CHANGELOG.md",
         "lib/files/README.md",
         "lib/files/editorconfig",
@@ -185,12 +182,13 @@ Object {
         "lib/files/npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
         "lib/files/package-entry-flow.js": "ignoreUpdates",
         "lib/files/yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3",
-        "node_modules/@backtrack/preset-jest/lib/files/appveyor.yml": "e26fc69a9c740e6fe6267ea2da435aa54c83a110eface66642470dc2e8336713",
-        "node_modules/@backtrack/preset-jest/lib/files/circleci-v2.yml": "3b7696d7b955ebd4ac0f5eeacfff227acea15301b6e450b111677d32411b2a8b",
-        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "2dfc22f99102a3d4d2335ad31b24e0902a3b81348aa74acf270d9c88ed0a2bf3",
-        "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "d37d10441a299a78a0b6b608fd44add196354f55a6eee2e9854cfef49baa033f",
+        "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
+        "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml": "d7ada4fec94d99d14f1cfc79160392b0c5f0499f9dd9ae49fd2fd5bc0736bb4c",
+        "node_modules/@backtrack/preset-jest/lib/files/jest-library.js": "322dd136d43514064c38fdf8cd999d6511d83af8efbb35d8d355a3f35937c6c4",
+        "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "bfd3a73af1c8ecd93d812d70e4e599406f14eda36920955df69a4109a3a2ed2e",
         "node_modules/@backtrack/preset-style/lib/files/eslint.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
+        "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "c8dd8df94d9c8de4503bc1ab4b4ea12c7450d76ebbd50c9b4c3c7975609e28da",
         "node_modules/@backtrack/preset-style/lib/files/prettier.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
       },
     },
@@ -199,7 +197,7 @@ Object {
     "flow",
   ],
   "format": Array [
-    "prettier **/*.{js,md,json} --write",
+    "prettier **/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml} --write",
   ],
   "lint": Array [
     "eslint .",
@@ -208,14 +206,6 @@ Object {
     "eslint --fix .",
   ],
   "packageJson": Array [
-    Object {
-      "lint-staged": Object {
-        "*.{js,md,json}": Array [
-          "prettier --write",
-          "git add",
-        ],
-      },
-    },
     Object {
       "scripts": Object {
         "test.update": "jest --updateSnapshot",
@@ -243,11 +233,16 @@ Object {
     "lint-staged",
   ],
   "prepublishOnly": Array [
-    "backtrack check-all",
+    "backtrack lint",
+    "backtrack test",
     "backtrack build",
+    "backtrack flow",
   ],
   "prepush": Array [
-    "backtrack check-all",
+    "backtrack lint",
+    "backtrack test",
+    "backtrack build",
+    "backtrack flow",
   ],
   "resolve": Object {
     "@backtrack/preset-jest": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib",
@@ -266,8 +261,8 @@ Object {
   ],
   "test.ci-pretest": Array [
     [Function noop],
-    "backtrack build",
     "backtrack lint",
+    "backtrack build",
     Object {
       "name": "flow ci",
       "task": "<PROJECT_ROOT>/lib/ci-run-flow.js",
@@ -283,14 +278,8 @@ Object {
     Array [
       Object {
         "name": "babel",
-        "task": "babel src -d dist --ignore test.js,__sandbox__/ --source-maps",
+        "task": [Function task],
       },
-    ],
-  ],
-  "check-all": Array [
-    Array [
-      "backtrack lint",
-      "backtrack test",
     ],
   ],
   "clean": Object {
@@ -305,9 +294,10 @@ Object {
     Array [
       Object {
         "name": "babel",
-        "task": "babel -w src/ -d dist/ --ignore test.js,__sandbox__/ --source-maps",
+        "task": [Function task],
       },
     ],
+    [Function anonymous],
   ],
   "files": Object {
     "dest": Object {
@@ -318,6 +308,7 @@ Object {
         ".eslintignore": "<PROJECT_ROOT>/.eslintignore",
         ".eslintrc.js": "<PROJECT_ROOT>/.eslintrc.js",
         ".gitignore": "<PROJECT_ROOT>/.gitignore",
+        ".lintstagedrc.js": "<PROJECT_ROOT>/.lintstagedrc.js",
         ".npmrc": "<PROJECT_ROOT>/.npmrc",
         ".prettierignore": "<PROJECT_ROOT>/.prettierignore",
         ".prettierrc.js": "<PROJECT_ROOT>/.prettierrc.js",
@@ -336,6 +327,7 @@ Object {
         ".eslintignore": false,
         ".eslintrc.js": false,
         ".gitignore": false,
+        ".lintstagedrc.js": false,
         ".npmrc": false,
         ".prettierignore": false,
         ".prettierrc.js": false,
@@ -352,9 +344,10 @@ Object {
         ".eslintignore",
         ".prettierrc.js",
         ".prettierignore",
-        "jest.config.js",
+        ".lintstagedrc.js",
         "wallaby.config.js",
         ".circleci/config.yml",
+        "jest.config.js",
         "appveyor.yml",
         "CHANGELOG.md",
         "README.md",
@@ -362,8 +355,8 @@ Object {
         ".gitignore",
         ".npmrc",
         ".yarnrc",
-        "src/preset-node-module.js",
         ".babelrc.js",
+        "src/preset-node-module.js",
       ],
       "ignoreUpdates": Object {
         ".babelrc.js": false,
@@ -372,6 +365,7 @@ Object {
         ".eslintignore": false,
         ".eslintrc.js": false,
         ".gitignore": false,
+        ".lintstagedrc.js": false,
         ".npmrc": false,
         ".prettierignore": false,
         ".prettierrc.js": false,
@@ -399,12 +393,13 @@ Object {
         "lib/files/npmrc": "<PROJECT_ROOT>/lib/files/npmrc",
         "lib/files/package-entry.js": "<PROJECT_ROOT>/lib/files/package-entry.js",
         "lib/files/yarnrc": "<PROJECT_ROOT>/lib/files/yarnrc",
-        "node_modules/@backtrack/preset-jest/lib/files/appveyor.yml": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/appveyor.yml",
-        "node_modules/@backtrack/preset-jest/lib/files/circleci-v2.yml": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/circleci-v2.yml",
-        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/jest.js",
+        "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/jest-library.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/jest-library.js",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/wallaby.js",
         "node_modules/@backtrack/preset-style/lib/files/eslint.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/eslint.js",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/ignore",
+        "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
         "node_modules/@backtrack/preset-style/lib/files/prettier.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/prettier.js",
       },
       "files": Array [
@@ -412,18 +407,19 @@ Object {
         "node_modules/@backtrack/preset-style/lib/files/ignore",
         "node_modules/@backtrack/preset-style/lib/files/prettier.js",
         "node_modules/@backtrack/preset-style/lib/files/ignore",
-        "node_modules/@backtrack/preset-jest/lib/files/jest.js",
+        "node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js",
-        "node_modules/@backtrack/preset-jest/lib/files/circleci-v2.yml",
-        "node_modules/@backtrack/preset-jest/lib/files/appveyor.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/jest-library.js",
+        "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml",
         "lib/files/CHANGELOG.md",
         "lib/files/README.md",
         "lib/files/editorconfig",
         "lib/files/gitignore",
         "lib/files/npmrc",
         "lib/files/yarnrc",
-        "lib/files/package-entry.js",
         "lib/files/babelrc.js",
+        "lib/files/package-entry.js",
       ],
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
@@ -434,18 +430,19 @@ Object {
         "lib/files/npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
         "lib/files/package-entry.js": "ignoreUpdates",
         "lib/files/yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3",
-        "node_modules/@backtrack/preset-jest/lib/files/appveyor.yml": "e26fc69a9c740e6fe6267ea2da435aa54c83a110eface66642470dc2e8336713",
-        "node_modules/@backtrack/preset-jest/lib/files/circleci-v2.yml": "3b7696d7b955ebd4ac0f5eeacfff227acea15301b6e450b111677d32411b2a8b",
-        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "2dfc22f99102a3d4d2335ad31b24e0902a3b81348aa74acf270d9c88ed0a2bf3",
-        "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "d37d10441a299a78a0b6b608fd44add196354f55a6eee2e9854cfef49baa033f",
+        "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
+        "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml": "d7ada4fec94d99d14f1cfc79160392b0c5f0499f9dd9ae49fd2fd5bc0736bb4c",
+        "node_modules/@backtrack/preset-jest/lib/files/jest-library.js": "322dd136d43514064c38fdf8cd999d6511d83af8efbb35d8d355a3f35937c6c4",
+        "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "bfd3a73af1c8ecd93d812d70e4e599406f14eda36920955df69a4109a3a2ed2e",
         "node_modules/@backtrack/preset-style/lib/files/eslint.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
+        "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "c8dd8df94d9c8de4503bc1ab4b4ea12c7450d76ebbd50c9b4c3c7975609e28da",
         "node_modules/@backtrack/preset-style/lib/files/prettier.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
       },
     },
   },
   "format": Array [
-    "prettier **/*.{js,md,json} --write",
+    "prettier **/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml} --write",
   ],
   "lint": Array [
     "eslint .",
@@ -454,14 +451,6 @@ Object {
     "eslint --fix .",
   ],
   "packageJson": Array [
-    Object {
-      "lint-staged": Object {
-        "*.{js,md,json}": Array [
-          "prettier --write",
-          "git add",
-        ],
-      },
-    },
     Object {
       "scripts": Object {
         "test.update": "jest --updateSnapshot",
@@ -488,11 +477,13 @@ Object {
     "lint-staged",
   ],
   "prepublishOnly": Array [
-    "backtrack check-all",
+    "backtrack lint",
+    "backtrack test",
     "backtrack build",
   ],
   "prepush": Array [
-    "backtrack check-all",
+    "backtrack lint",
+    "backtrack test",
   ],
   "resolve": Object {
     "@backtrack/preset-jest": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib",
@@ -511,7 +502,6 @@ Object {
   ],
   "test.ci-pretest": Array [
     [Function noop],
-    "backtrack build",
     "backtrack lint",
   ],
 }

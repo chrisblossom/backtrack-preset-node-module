@@ -35,19 +35,13 @@
     "test.update": "jest --updateSnapshot",
     "test.watch": "jest --watch"
   },
-  "lint-staged": {
-    "*.{js,md,json}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "devDependencies": {
     "@backtrack/core": "^0.1.20",
-    "@backtrack/preset-preset": "^0.3.2"
+    "@backtrack/preset-preset": "^0.3.7"
   },
   "dependencies": {
-    "@backtrack/preset-jest": "^0.3.3",
-    "@backtrack/preset-style": "^0.1.9",
+    "@backtrack/preset-jest": "^0.3.6",
+    "@backtrack/preset-style": "^0.1.11",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-dynamic-import-node": "^2.0.0",
@@ -55,7 +49,9 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-flow": "^6.23.0",
-    "flow-bin": "^0.77.0",
+    "chokidar": "^2.0.4",
+    "del": "^3.0.0",
+    "flow-bin": "^0.78.0",
     "flow-copy-source": "^2.0.2",
     "read-pkg-up": "^4.0.0"
   }
