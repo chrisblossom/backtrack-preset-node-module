@@ -51,7 +51,6 @@
     "babel-preset-flow": "^6.23.0",
     "chokidar": "^2.0.4",
     "del": "^3.0.0",
-    "flow-bin": "^0.78.0",
     "flow-copy-source": "^2.0.2",
     "read-pkg-up": "^4.0.0"
   }
