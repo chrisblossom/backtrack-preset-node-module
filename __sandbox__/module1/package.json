@@ -39,7 +39,7 @@
   },
   "babel": {
     "presets": [
-      "./.babelrc.js"
+      "@backtrack/preset-node-module/babel-flow"
     ]
   },
   "devDependencies": {
@@ -47,6 +47,6 @@
     "flow-bin": "^0.78.0"
   },
   "dependencies": {
-    "@backtrack/preset-node-app": "file:../.."
+    "@backtrack/preset-node-module": "file:../.."
   }
 }

@@ -35,11 +35,11 @@ Object {
       },
     ],
     [Function anonymous],
+    [Function anonymous],
   ],
   "files": Object {
     "dest": Object {
       "absolute": Object {
-        ".babelrc.js": "<PROJECT_ROOT>/.babelrc.js",
         ".circleci/config.yml": "<PROJECT_ROOT>/.circleci/config.yml",
         ".editorconfig": "<PROJECT_ROOT>/.editorconfig",
         ".eslintignore": "<PROJECT_ROOT>/.eslintignore",
@@ -60,7 +60,6 @@ Object {
         "wallaby.config.js": "<PROJECT_ROOT>/wallaby.config.js",
       },
       "allowChanges": Object {
-        ".babelrc.js": false,
         ".circleci/config.yml": false,
         ".editorconfig": false,
         ".eslintignore": false,
@@ -97,12 +96,10 @@ Object {
         ".npmrc",
         ".yarnrc",
         "src/preset-node-module.js",
-        ".babelrc.js",
         ".flowconfig",
         "flow-typed/jest.js",
       ],
       "ignoreUpdates": Object {
-        ".babelrc.js": false,
         ".circleci/config.yml": false,
         ".editorconfig": false,
         ".eslintignore": false,
@@ -133,7 +130,6 @@ Object {
       "absolute": Object {
         "lib/files/CHANGELOG.md": "<PROJECT_ROOT>/lib/files/CHANGELOG.md",
         "lib/files/README.md": "<PROJECT_ROOT>/lib/files/README.md",
-        "lib/files/babelrc-flow.js": "<PROJECT_ROOT>/lib/files/babelrc-flow.js",
         "lib/files/editorconfig": "<PROJECT_ROOT>/lib/files/editorconfig",
         "lib/files/flowconfig": "<PROJECT_ROOT>/lib/files/flowconfig",
         "lib/files/gitignore": "<PROJECT_ROOT>/lib/files/gitignore",
@@ -167,14 +163,12 @@ Object {
         "lib/files/npmrc",
         "lib/files/yarnrc",
         "lib/files/package-entry-flow.js",
-        "lib/files/babelrc-flow.js",
         "lib/files/flowconfig",
         "lib/files/jest.flow",
       ],
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babelrc-flow.js": "31340d9716a55146d1d2f2573bb6b4a67c4957774fb1c7175397966be7b0e10f",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/flowconfig": "a097b005abea75e2e62d08a1cdbf12263aa9e5c220be921f7992a1cbc1e1bd18",
         "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
@@ -215,7 +209,7 @@ Object {
     Object {
       "babel": Object {
         "presets": Array [
-          "./.babelrc.js",
+          "@backtrack/preset-node-module/babel-flow",
         ],
       },
       "engines": Object {
@@ -298,11 +292,11 @@ Object {
       },
     ],
     [Function anonymous],
+    [Function anonymous],
   ],
   "files": Object {
     "dest": Object {
       "absolute": Object {
-        ".babelrc.js": "<PROJECT_ROOT>/.babelrc.js",
         ".circleci/config.yml": "<PROJECT_ROOT>/.circleci/config.yml",
         ".editorconfig": "<PROJECT_ROOT>/.editorconfig",
         ".eslintignore": "<PROJECT_ROOT>/.eslintignore",
@@ -321,7 +315,6 @@ Object {
         "wallaby.config.js": "<PROJECT_ROOT>/wallaby.config.js",
       },
       "allowChanges": Object {
-        ".babelrc.js": false,
         ".circleci/config.yml": false,
         ".editorconfig": false,
         ".eslintignore": false,
@@ -355,11 +348,9 @@ Object {
         ".gitignore",
         ".npmrc",
         ".yarnrc",
-        ".babelrc.js",
         "src/preset-node-module.js",
       ],
       "ignoreUpdates": Object {
-        ".babelrc.js": false,
         ".circleci/config.yml": false,
         ".editorconfig": false,
         ".eslintignore": false,
@@ -387,7 +378,6 @@ Object {
       "absolute": Object {
         "lib/files/CHANGELOG.md": "<PROJECT_ROOT>/lib/files/CHANGELOG.md",
         "lib/files/README.md": "<PROJECT_ROOT>/lib/files/README.md",
-        "lib/files/babelrc.js": "<PROJECT_ROOT>/lib/files/babelrc.js",
         "lib/files/editorconfig": "<PROJECT_ROOT>/lib/files/editorconfig",
         "lib/files/gitignore": "<PROJECT_ROOT>/lib/files/gitignore",
         "lib/files/npmrc": "<PROJECT_ROOT>/lib/files/npmrc",
@@ -418,13 +408,11 @@ Object {
         "lib/files/gitignore",
         "lib/files/npmrc",
         "lib/files/yarnrc",
-        "lib/files/babelrc.js",
         "lib/files/package-entry.js",
       ],
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babelrc.js": "2ba1900d7d5148a5834dc7863dbc26ff75e03dcf503c1ba973361e865fe6f6d3",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
         "lib/files/npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
@@ -460,7 +448,7 @@ Object {
     Object {
       "babel": Object {
         "presets": Array [
-          "./.babelrc.js",
+          "@backtrack/preset-node-module/babel-no-flow",
         ],
       },
       "engines": Object {

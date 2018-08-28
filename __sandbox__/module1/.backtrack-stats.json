@@ -7,7 +7,6 @@
             "src"
         ],
         "files": {
-            ".babelrc.js": "31340d9716a55146d1d2f2573bb6b4a67c4957774fb1c7175397966be7b0e10f",
             ".circleci/config.yml": "f8afa0de22d1ce5ee659b86993cf898e85b383599dab0f06ef052d1f4510ef37",
             ".editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
             ".eslintignore": "7b358a16955be6b9b56add38102fccd293af540701ac91cd5020bfe37fe3fbb3",
@@ -31,7 +30,7 @@
     "packageJson": {
         "babel": {
             "presets": [
-                "./.babelrc.js"
+                "@backtrack/preset-node-module/babel-flow"
             ]
         },
         "engines": {

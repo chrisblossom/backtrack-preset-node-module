@@ -19,7 +19,7 @@
 
 ## Installation
 
-`npm install --save-dev @backtrack/preset-node-module`
+`npm install --save-dev @backtrack/preset-node-module flow-bin`
 
 ## Usage
 
@@ -49,6 +49,25 @@ module.exports = {
                  * default: true
                  */
                 flow: false,
+
+                /**
+                 * Use node >=8.9.0
+                 *
+                 * default: '>=6.9.0'
+                 */
+                nodeVersion: '>=8.9.0',
+
+                /**
+                 * Use npm >=5.0.0
+                 *
+                 * default: '>=3.10.10'
+                 */
+                npmVersion: '>=5.0.0',
+
+                /**
+                 * Use custom babel config file
+                 */
+                babelConfig: './.babelrc.js',
             },
         ],
     ],
