@@ -19,9 +19,7 @@
     "npm": ">=3.10.10"
   },
   "files": [
-    "lib/",
-    "babel-flow.js",
-    "babel-no-flow.js"
+    "lib/"
   ],
   "main": "lib/preset-node-module.js",
   "scripts": {
@@ -52,6 +50,7 @@
     "@backtrack/preset-jest": "^0.3.10",
     "@backtrack/preset-style": "^0.1.17",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-plugin-dynamic-import-node": "^2.2.0",
     "chokidar": "^2.0.4",
     "cross-spawn": "^6.0.5",

@@ -20,9 +20,10 @@
     "dev": "backtrack dev --development",
     "flow": "backtrack flow",
     "format": "backtrack format",
+    "git-pre-commit": "backtrack git-pre-commit",
+    "git-pre-push": "backtrack git-pre-push",
     "lint": "backtrack lint",
     "lint.fix": "backtrack lint.fix",
-    "precommit": "backtrack precommit",
     "prepublishOnly": "backtrack prepublishOnly",
     "prepush": "backtrack prepush",
     "test": "backtrack test",
@@ -35,11 +36,6 @@
     "*.{js,md,json}": [
       "prettier --write",
       "git add"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "@backtrack/preset-node-module/babel-flow"
     ]
   },
   "devDependencies": {

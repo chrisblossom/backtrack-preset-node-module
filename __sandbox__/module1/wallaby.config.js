@@ -55,12 +55,36 @@ const wallaby = (wallabyConfig) => {
 
             setup: (setupConfig) => {
                 /**
+                 * link node_modules inside wallaby's temp dir
+                 *
+                 * https://github.com/wallabyjs/public/issues/1663#issuecomment-389717074
+                 */
+                const fs = require('fs');
+                const path = require('path');
+                const realModules = path.join(
+                    setupConfig.localProjectDir,
+                    'node_modules'
+                );
+                const linkedModules = path.join(
+                    setupConfig.projectCacheDir,
+                    'node_modules'
+                );
+
+                try {
+                    fs.symlinkSync(realModules, linkedModules, 'dir');
+                } catch (error) {
+                    if (error.code !== 'EEXIST') {
+                        throw error;
+                    }
+                }
+
+                /**
                  * Set to project local path so backtrack can correctly resolve modules
                  * https://github.com/wallabyjs/public/issues/1552#issuecomment-372002860
                  */
                 process.chdir(setupConfig.localProjectDir);
 
-                require('babel-polyfill');
+                require('@babel/polyfill');
                 process.env.NODE_ENV = 'test';
                 const jestConfig = require('./jest.config');
                 jestConfig.transform = {

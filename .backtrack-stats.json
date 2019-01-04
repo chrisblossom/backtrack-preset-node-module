@@ -31,9 +31,7 @@
             "npm": ">=3.10.10"
         },
         "files": [
-            "lib/",
-            "babel-flow.js",
-            "babel-no-flow.js"
+            "lib/"
         ],
         "main": "lib/preset-node-module.js",
         "scripts": {

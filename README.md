@@ -63,11 +63,6 @@ module.exports = {
                  * default: '>=3.10.10'
                  */
                 npmVersion: '>=5.0.0',
-
-                /**
-                 * Use custom babel config file
-                 */
-                babelConfig: './.babelrc.js',
             },
         ],
     ],
