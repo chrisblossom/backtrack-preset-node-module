@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`adds flow with flow: true option 1`] = `
+exports[`options flow: true 1`] = `
 Object {
   "build": Array [
     "backtrack clean",
@@ -288,7 +288,7 @@ Object {
 }
 `;
 
-exports[`preset returns expected config - defaults flow: true 1`] = `
+exports[`preset returns expected config 1`] = `
 Object {
   "build": Array [
     "backtrack clean",
