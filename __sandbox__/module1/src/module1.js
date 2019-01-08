@@ -1,10 +1,7 @@
-/* @flow */
-
 /**
  * module entry file
  */
 
-// eslint-disable-next-line node/no-unsupported-features/es-syntax
 async function hello() {
     await import('./other.js');
 

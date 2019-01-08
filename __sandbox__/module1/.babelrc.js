@@ -27,7 +27,6 @@ const babel = {
                 useBuiltIns: 'entry',
             },
         ],
-        pkg.resolve(packageId, '@babel/preset-flow'),
     ],
     plugins: [
         pkg.resolve(packageId, 'babel-plugin-dynamic-import-node'),
