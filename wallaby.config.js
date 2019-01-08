@@ -94,6 +94,12 @@ const wallaby = (wallabyConfig) => {
                  * reset to expected wallaby process.cwd
                  */
                 process.chdir(setupConfig.projectCacheDir);
+
+                /**
+                 * hack until https://github.com/wallabyjs/public/issues/1949
+                 */
+                fs.chmodSync('./lib/utils/__sandbox__/cli-cmd-file.js','755');
+                fs.chmodSync('./lib/utils/__sandbox__/cli-cmd-file-error.js','755');
             },
         },
     });
