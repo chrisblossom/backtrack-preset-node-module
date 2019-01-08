@@ -6,7 +6,7 @@
             "src"
         ],
         "files": {
-            ".babelrc.js": "266c77772123acc7cfc17d6ba08303633c628d65688c5dc197175f1e10b7c944",
+            ".babelrc.js": "0d67470127273083075e12034e65050fac6ee146fbabd903300b011a3ad7d6ef",
             ".circleci/config.yml": "f8afa0de22d1ce5ee659b86993cf898e85b383599dab0f06ef052d1f4510ef37",
             ".editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
             ".eslintignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
@@ -22,7 +22,7 @@
             "README.md": "ignoreUpdates",
             "appveyor.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
             "jest.config.js": "89b921f7f379662d979221ac8124f85a5c2443a66f5d6922babf18e67b0f5727",
-            "src/module1.js": "ignoreUpdates",
+            "src/node-module.js": "ignoreUpdates",
             "wallaby.config.js": "e49a5402ae304b54d6aa0087e0d6d95b0561a03dd16783d6d0a513036cf98712"
         }
     },
@@ -34,7 +34,7 @@
         "files": [
             "dist/"
         ],
-        "main": "dist/module1.js",
+        "main": "dist/node-module.js",
         "scripts": {
             "build": "backtrack build --production",
             "clean": "backtrack clean",

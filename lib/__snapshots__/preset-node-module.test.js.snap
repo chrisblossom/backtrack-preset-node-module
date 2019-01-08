@@ -24,6 +24,17 @@ Object {
   },
   "config": Array [
     Object {
+      "eslint": Object {
+        "overrides": Array [
+          Object {
+            "files": "src/preset-node-module.{js,ts}",
+            "rules": Object {
+              "import/no-default-export": "off",
+              "import/prefer-default-export": "error",
+            },
+          },
+        ],
+      },
       "jest": Object {
         "transform": Object {
           "^.+/.(tsx?|jsx?)$": "<PROJECT_ROOT>/lib/jest-babel-transform.js",
@@ -190,7 +201,7 @@ Object {
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babel-flow.js": "fd0204cfa3fea8cf8f18930882fd0cdeb96450ed595c55b3ab1848b86bc7a922",
+        "lib/files/babel-flow.js": "b866976a5fd685e9d9df7649c645e395d109614cf43096a3416ee3af991513bd",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/flowconfig": "a097b005abea75e2e62d08a1cdbf12263aa9e5c220be921f7992a1cbc1e1bd18",
         "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
@@ -308,6 +319,17 @@ Object {
   },
   "config": Array [
     Object {
+      "eslint": Object {
+        "overrides": Array [
+          Object {
+            "files": "src/preset-node-module.{js,ts}",
+            "rules": Object {
+              "import/no-default-export": "off",
+              "import/prefer-default-export": "error",
+            },
+          },
+        ],
+      },
       "jest": Object {
         "transform": Object {
           "^.+/.(tsx?|jsx?)$": "<PROJECT_ROOT>/lib/jest-babel-transform.js",
@@ -457,7 +479,7 @@ Object {
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babel-basic.js": "266c77772123acc7cfc17d6ba08303633c628d65688c5dc197175f1e10b7c944",
+        "lib/files/babel-basic.js": "0d67470127273083075e12034e65050fac6ee146fbabd903300b011a3ad7d6ef",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
         "lib/files/npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",

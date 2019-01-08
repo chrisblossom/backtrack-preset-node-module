@@ -1,5 +1,5 @@
 {
-  "name": "module1",
+  "name": "node-module",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -12,7 +12,7 @@
   "files": [
     "dist/"
   ],
-  "main": "dist/module1.js",
+  "main": "dist/node-module.js",
   "scripts": {
     "build": "backtrack build --production",
     "clean": "backtrack clean",
