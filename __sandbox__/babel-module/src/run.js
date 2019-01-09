@@ -1,5 +1,5 @@
-import run from './node-module';
-// const run = require('./node-module');
-// const run = require('./node-module').default;
+import run from './babel-module';
+// const run = require('./babel-module');
+// const run = require('./babel-module').default;
 
 run();

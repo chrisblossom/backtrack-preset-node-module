@@ -22,8 +22,8 @@
             "README.md": "ignoreUpdates",
             "appveyor.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
             "jest.config.js": "89b921f7f379662d979221ac8124f85a5c2443a66f5d6922babf18e67b0f5727",
-            "src/node-module.js": "ignoreUpdates",
-            "wallaby.config.js": "e49a5402ae304b54d6aa0087e0d6d95b0561a03dd16783d6d0a513036cf98712"
+            "src/babel-module.js": "ignoreUpdates",
+            "wallaby.config.js": "fb18cd12a40eb4e2e311d8ea67b1c6a04eb2af3486e1363419eff4cd36a39cc8"
         }
     },
     "packageJson": {
@@ -34,7 +34,7 @@
         "files": [
             "dist/"
         ],
-        "main": "dist/node-module.js",
+        "main": "dist/babel-module.js",
         "scripts": {
             "build": "backtrack build --production",
             "clean": "backtrack clean",

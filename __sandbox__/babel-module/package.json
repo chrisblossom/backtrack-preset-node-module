@@ -12,7 +12,7 @@
   "files": [
     "dist/"
   ],
-  "main": "dist/node-module.js",
+  "main": "dist/babel-module.js",
   "scripts": {
     "build": "backtrack build --production",
     "clean": "backtrack clean",

@@ -2,8 +2,8 @@
  * module entry file
  */
 
-function nodeModule() {
+function babelModule() {
     console.log('hello fn');
 }
 
-export default nodeModule;
+export default babelModule;

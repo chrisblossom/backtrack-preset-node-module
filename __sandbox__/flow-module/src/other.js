@@ -1,3 +1,5 @@
+/* @flow */
+
 function other() {
     console.log('other');
 }

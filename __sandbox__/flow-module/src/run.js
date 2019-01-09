@@ -1,5 +1,7 @@
-import run from './node-module';
-// const run = require('./node-module');
-// const run = require('./node-module').default;
+/* @flow */
+
+import run from './flow-module';
+// const run = require('./flow-module');
+// const run = require('./flow-module').default;
 
 run();

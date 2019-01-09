@@ -13,34 +13,47 @@ const Backtrack = require('@backtrack/core');
 
 const { configManager } = new Backtrack();
 
-const wallaby = (wallabyConfig) => {
+const ignore = [
+    '!**/node_modules/**',
+    '!**/dist/**',
+    '!**/build/**',
+    '!**/coverage/**',
+    '!**/.git/**',
+    '!**/.idea/**',
+    '!**/.vscode/**',
+    '!**/.cache/**',
+    '!**/.DS_Store/**',
+];
+
+module.exports = (wallabyInitial) => {
     /**
      * Needed for monorepo
      */
     process.env.NODE_PATH = require('path').join(
-        wallabyConfig.localProjectDir,
+        wallabyInitial.localProjectDir,
         '../../node_modules'
     );
 
-    return configManager({
+    const wallabyConfig = configManager({
         namespace: 'wallaby',
         config: {
             files: [
-                { pattern: './node_modules/**/*', ignore: true },
+                ...ignore,
                 { pattern: '*', instrument: false },
                 { pattern: '.*', instrument: false },
                 { pattern: '**/__sandbox__/**/*', instrument: false },
                 { pattern: '**/__sandbox__/**/.*', instrument: false },
-                'src/**/*.js',
-                '!src/**/*.test.js',
-                { pattern: 'src/**/.*', instrument: false },
-                { pattern: 'src/**/*', instrument: false },
+                '**/*.+(js|jsx|ts|tsx)',
+                '!**/*.test.+(js|ts)',
+                { pattern: '**/.*', instrument: false },
+                { pattern: '**/*', instrument: false },
             ],
 
-            tests: ['src/**/*.test.js'],
+            tests: [...ignore, '!**/__sandbox__/**', '**/*.test.+(js|ts)'],
 
             compilers: {
-                'src/**/*.js': wallabyConfig.compilers.babel(),
+                'src/**/*.+(js|jsx)': wallabyInitial.compilers.babel(),
+                '**/*.+(ts|tsx)': wallabyInitial.compilers.babel(),
             },
 
             hints: {
@@ -54,7 +67,7 @@ const wallaby = (wallabyConfig) => {
 
             testFramework: 'jest',
 
-            setup: (setupConfig) => {
+            setup: (wallabySetup) => {
                 /**
                  * link node_modules inside wallaby's temp dir
                  *
@@ -63,11 +76,11 @@ const wallaby = (wallabyConfig) => {
                 const fs = require('fs');
                 const path = require('path');
                 const realModules = path.join(
-                    setupConfig.localProjectDir,
+                    wallabySetup.localProjectDir,
                     'node_modules'
                 );
                 const linkedModules = path.join(
-                    setupConfig.projectCacheDir,
+                    wallabySetup.projectCacheDir,
                     'node_modules'
                 );
 
@@ -83,25 +96,33 @@ const wallaby = (wallabyConfig) => {
                  * Set to project local path so backtrack can correctly resolve modules
                  * https://github.com/wallabyjs/public/issues/1552#issuecomment-372002860
                  */
-                process.chdir(setupConfig.localProjectDir);
+                process.chdir(wallabySetup.localProjectDir);
 
-                require('@babel/polyfill');
+                try {
+                    require('@babel/polyfill');
+                    // eslint-disable-next-line no-empty
+                } catch (error) {}
                 process.env.NODE_ENV = 'test';
                 const jestConfig = require('./jest.config');
-                jestConfig.transform = {
-                    '__sandbox__.+\\.jsx?$': 'babel-jest',
-                };
-                setupConfig.testFramework.configure(jestConfig);
+                wallabySetup.testFramework.configure(jestConfig);
 
                 /**
                  * https://github.com/wallabyjs/public/issues/1268#issuecomment-323237993
                  *
                  * reset to expected wallaby process.cwd
                  */
-                process.chdir(setupConfig.projectCacheDir);
+                process.chdir(wallabySetup.projectCacheDir);
+
+                try {
+                    /**
+                     * Run custom wallaby setup script
+                     */
+                    require('./wallaby.setup.js')(wallabySetup);
+                    // eslint-disable-next-line no-empty
+                } catch (error) {}
             },
         },
     });
-};
 
-module.exports = wallaby;
+    return wallabyConfig;
+};

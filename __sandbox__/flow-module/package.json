@@ -10,13 +10,15 @@
     "npm": ">=3.10.10"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "flow-typed/"
   ],
-  "main": "dist/node-module.js",
+  "main": "dist/flow-module.js",
   "scripts": {
     "build": "backtrack build --production",
     "clean": "backtrack clean",
     "dev": "backtrack dev --development",
+    "flow": "backtrack flow",
     "format": "backtrack format",
     "git-pre-commit": "backtrack git-pre-commit",
     "git-pre-push": "backtrack git-pre-push",
