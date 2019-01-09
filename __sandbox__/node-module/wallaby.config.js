@@ -26,20 +26,21 @@ const wallaby = (wallabyConfig) => {
         namespace: 'wallaby',
         config: {
             files: [
+                { pattern: './node_modules/**/*', ignore: true },
+                { pattern: '*', instrument: false },
+                { pattern: '.*', instrument: false },
                 { pattern: '**/__sandbox__/**/*', instrument: false },
                 { pattern: '**/__sandbox__/**/.*', instrument: false },
-                { pattern: '.babelrc+(.js|)', instrument: false },
                 'src/**/*.js',
-                'jest.config.js',
-                '.env',
-                'src/**/*.snap',
                 '!src/**/*.test.js',
+                { pattern: 'src/**/.*', instrument: false },
+                { pattern: 'src/**/*', instrument: false },
             ],
 
             tests: ['src/**/*.test.js'],
 
             compilers: {
-                '**/*.js': wallabyConfig.compilers.babel(),
+                'src/**/*.js': wallabyConfig.compilers.babel(),
             },
 
             hints: {

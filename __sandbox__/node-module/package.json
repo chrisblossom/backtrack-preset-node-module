@@ -10,13 +10,10 @@
     "npm": ">=3.10.10"
   },
   "files": [
-    "dist/"
+    "lib/"
   ],
-  "main": "dist/node-module.js",
+  "main": "lib/node-module.js",
   "scripts": {
-    "build": "backtrack build --production",
-    "clean": "backtrack clean",
-    "dev": "backtrack dev --development",
     "format": "backtrack format",
     "git-pre-commit": "backtrack git-pre-commit",
     "git-pre-push": "backtrack git-pre-push",
@@ -28,12 +25,6 @@
     "test.ci-pretest": "backtrack test.ci-pretest",
     "test.update": "jest --updateSnapshot",
     "test.watch": "jest --watch"
-  },
-  "lint-staged": {
-    "*.{js,md,json}": [
-      "prettier --write",
-      "git add"
-    ]
   },
   "devDependencies": {
     "@backtrack/core": "^0.1.20"

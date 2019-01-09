@@ -3,8 +3,6 @@
 module.exports = {
     presets: ['@backtrack/preset'],
 
-    files: { allowChanges: 'wallaby.config.js' },
-
     config: {
         eslint: {
             overrides: [
@@ -15,6 +13,12 @@ module.exports = {
                     },
                 },
             ],
+        },
+
+        wallaby: (config) => {
+            config.files = ['!./__sandbox__/**', ...config.files];
+
+            return config;
         },
     },
 };
