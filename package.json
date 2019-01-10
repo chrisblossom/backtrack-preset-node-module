@@ -38,6 +38,8 @@
   "devDependencies": {
     "@backtrack/core": "^0.1.23",
     "@backtrack/preset-preset": "^0.3.14",
+    "execa": "^1.0.0",
+    "read-dir-deep": "^3.0.0",
     "strip-ansi": "^5.0.0",
     "typescript": "^3.2.2"
   },

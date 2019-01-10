@@ -32,18 +32,13 @@ const babel = {
         pkg.resolve(backtrackId, '@babel/preset-flow'),
     ],
     plugins: [
-        [
-            pkg.resolve(backtrackId, 'babel-plugin-add-module-exports'),
-            { addDefaultProperty: true },
-        ],
         pkg.resolve(backtrackId, 'babel-plugin-dynamic-import-node'),
         pkg.resolve(backtrackId, '@babel/plugin-proposal-class-properties'),
         pkg.resolve(backtrackId, '@babel/plugin-transform-strict-mode'),
     ],
-
     overrides: [
         {
-            test: [`./src/${packageId}.js`, `./src/${packageId}.ts`],
+            test: [`./src/${packageId}.js`],
             plugins: [
                 pkg.resolve(backtrackId, 'babel-plugin-add-module-exports'),
             ],

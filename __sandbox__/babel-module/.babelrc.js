@@ -43,7 +43,6 @@ const babel = {
             ],
         },
     ],
-    ignore: ['**/*.test.js', '**/__sandbox__/*'],
 };
 
 module.exports = configManager({
