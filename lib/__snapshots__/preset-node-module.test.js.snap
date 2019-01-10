@@ -468,6 +468,11 @@ Object {
 }
 `;
 
+exports[`cannot have more than one option true 1`] = `
+[Error: only one preset can be enabled at a time
+found in path: <PROJECT_ROOT>/lib]
+`;
+
 exports[`flow: true 1`] = `
 Object {
   "build": Array [
