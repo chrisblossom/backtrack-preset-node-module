@@ -1,9 +1,7 @@
 'use strict';
 
 module.exports = {
-    presets: [['../../', { flow: true }]],
-
-    files: { allowChanges: '.flowconfig' },
+    presets: [['../../', { typescript: true }]],
 
     config: {
         eslint: {

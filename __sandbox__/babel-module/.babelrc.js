@@ -37,12 +37,13 @@ const babel = {
     ],
     overrides: [
         {
-            test: [`./src/${packageId}.js`, `./src/${packageId}.ts`],
+            test: [`./src/${packageId}.js`],
             plugins: [
                 pkg.resolve(backtrackId, 'babel-plugin-add-module-exports'),
             ],
         },
     ],
+    ignore: ['**/*.test.js', '**/__sandbox__/*'],
 };
 
 module.exports = configManager({

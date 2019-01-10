@@ -176,7 +176,7 @@ Object {
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babel-basic.js": "0d67470127273083075e12034e65050fac6ee146fbabd903300b011a3ad7d6ef",
+        "lib/files/babel-basic.js": "fdc90244dc1d6cc36b6b3c91858ad1a2261e761c146e440f159e86a4ca1710b8",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
         "lib/files/npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
@@ -209,10 +209,10 @@ Object {
     "backtrack test",
   ],
   "lint": Array [
-    "eslint .",
+    "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
   ],
   "lint.fix": Array [
-    "eslint --fix .",
+    "eslint --ext .js,.jsx,.mjs,.ts,.tsx --fix .",
   ],
   "packageJson": Array [
     Object {
@@ -255,6 +255,7 @@ Object {
   ],
   "test.ci-pretest": Array [
     [Function noop],
+    "backtrack build",
     "backtrack lint",
   ],
 }
@@ -418,10 +419,10 @@ Object {
     "backtrack test",
   ],
   "lint": Array [
-    "eslint .",
+    "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
   ],
   "lint.fix": Array [
-    "eslint --fix .",
+    "eslint --ext .js,.jsx,.mjs,.ts,.tsx --fix .",
   ],
   "packageJson": Array [
     Object {
@@ -469,6 +470,21 @@ Object {
 `;
 
 exports[`cannot have more than one option true 1`] = `
+[Error: only one preset can be enabled at a time
+found in path: <PROJECT_ROOT>/lib]
+`;
+
+exports[`cannot have more than one option true 2`] = `
+[Error: only one preset can be enabled at a time
+found in path: <PROJECT_ROOT>/lib]
+`;
+
+exports[`cannot have more than one option true 3`] = `
+[Error: only one preset can be enabled at a time
+found in path: <PROJECT_ROOT>/lib]
+`;
+
+exports[`cannot have more than one option true 4`] = `
 [Error: only one preset can be enabled at a time
 found in path: <PROJECT_ROOT>/lib]
 `;
@@ -674,7 +690,7 @@ Object {
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babel-flow.js": "b866976a5fd685e9d9df7649c645e395d109614cf43096a3416ee3af991513bd",
+        "lib/files/babel-flow.js": "3af25a40643ae330931efb227a65bc689b06c370551caa10e07576d4eb5adb02",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/flowconfig": "a097b005abea75e2e62d08a1cdbf12263aa9e5c220be921f7992a1cbc1e1bd18",
         "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
@@ -714,10 +730,10 @@ Object {
     "backtrack flow",
   ],
   "lint": Array [
-    "eslint .",
+    "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
   ],
   "lint.fix": Array [
-    "eslint --fix .",
+    "eslint --ext .js,.jsx,.mjs,.ts,.tsx --fix .",
   ],
   "packageJson": Array [
     Object {
@@ -762,12 +778,312 @@ Object {
   ],
   "test.ci-pretest": Array [
     [Function noop],
-    "backtrack lint",
     "backtrack build",
+    "backtrack lint",
     Object {
       "name": "flow ci",
       "task": "<PROJECT_ROOT>/lib/ci-run-flow.js",
     },
+  ],
+}
+`;
+
+exports[`typescript: true 1`] = `
+Object {
+  "build": Array [
+    "backtrack clean",
+    Array [
+      Object {
+        "name": "babel",
+        "task": [Function task],
+      },
+      Object {
+        "name": "typescript declarations",
+        "task": "tsc --project tsconfig.declaration.json",
+      },
+    ],
+  ],
+  "clean": Object {
+    "copy": Array [],
+    "del": Array [
+      "**/*",
+    ],
+    "makeDirs": Array [],
+  },
+  "config": Array [
+    Object {
+      "eslint": Object {
+        "overrides": Array [
+          Object {
+            "files": "src/preset-node-module.{js,ts}",
+            "rules": Object {
+              "import/no-default-export": "off",
+              "import/prefer-default-export": "error",
+            },
+          },
+        ],
+      },
+      "jest": Object {
+        "moduleFileExtensions": Array [
+          "js",
+          "ts",
+        ],
+        "testRegex": "(/__tests__/.*|(/.|/)(test|spec))/.(jsx?|tsx?)$",
+        "transform": Object {
+          "^.+/.(tsx?|jsx?)$": "<PROJECT_ROOT>/lib/jest-babel-transform.js",
+        },
+      },
+    },
+  ],
+  "dev": Array [
+    "backtrack clean",
+    Object {
+      "name": "babel",
+      "task": [Function task],
+    },
+    [Function anonymous],
+    [Function anonymous],
+  ],
+  "files": Object {
+    "dest": Object {
+      "absolute": Object {
+        ".babelrc.js": "<PROJECT_ROOT>/.babelrc.js",
+        ".circleci/config.yml": "<PROJECT_ROOT>/.circleci/config.yml",
+        ".editorconfig": "<PROJECT_ROOT>/.editorconfig",
+        ".eslintignore": "<PROJECT_ROOT>/.eslintignore",
+        ".eslintrc.js": "<PROJECT_ROOT>/.eslintrc.js",
+        ".gitignore": "<PROJECT_ROOT>/.gitignore",
+        ".huskyrc.js": "<PROJECT_ROOT>/.huskyrc.js",
+        ".lintstagedrc.js": "<PROJECT_ROOT>/.lintstagedrc.js",
+        ".npmrc": "<PROJECT_ROOT>/.npmrc",
+        ".prettierignore": "<PROJECT_ROOT>/.prettierignore",
+        ".prettierrc.js": "<PROJECT_ROOT>/.prettierrc.js",
+        ".yarnrc": "<PROJECT_ROOT>/.yarnrc",
+        "CHANGELOG.md": "<PROJECT_ROOT>/CHANGELOG.md",
+        "README.md": "<PROJECT_ROOT>/README.md",
+        "appveyor.yml": "<PROJECT_ROOT>/appveyor.yml",
+        "global.d.ts": "<PROJECT_ROOT>/global.d.ts",
+        "jest.config.js": "<PROJECT_ROOT>/jest.config.js",
+        "src/preset-node-module.ts": "<PROJECT_ROOT>/src/preset-node-module.ts",
+        "tsconfig.declaration.json": "<PROJECT_ROOT>/tsconfig.declaration.json",
+        "tsconfig.json": "<PROJECT_ROOT>/tsconfig.json",
+        "wallaby.config.js": "<PROJECT_ROOT>/wallaby.config.js",
+      },
+      "allowChanges": Object {
+        ".babelrc.js": false,
+        ".circleci/config.yml": false,
+        ".editorconfig": false,
+        ".eslintignore": false,
+        ".eslintrc.js": false,
+        ".gitignore": false,
+        ".huskyrc.js": false,
+        ".lintstagedrc.js": false,
+        ".npmrc": false,
+        ".prettierignore": false,
+        ".prettierrc.js": false,
+        ".yarnrc": false,
+        "CHANGELOG.md": true,
+        "README.md": true,
+        "appveyor.yml": false,
+        "global.d.ts": true,
+        "jest.config.js": false,
+        "src/preset-node-module.ts": true,
+        "tsconfig.declaration.json": false,
+        "tsconfig.json": false,
+        "wallaby.config.js": false,
+      },
+      "files": Array [
+        ".eslintignore",
+        ".prettierrc.js",
+        ".prettierignore",
+        ".lintstagedrc.js",
+        ".eslintrc.js",
+        ".huskyrc.js",
+        ".circleci/config.yml",
+        "wallaby.config.js",
+        "jest.config.js",
+        "appveyor.yml",
+        "CHANGELOG.md",
+        "README.md",
+        ".editorconfig",
+        ".gitignore",
+        ".npmrc",
+        ".yarnrc",
+        "src/preset-node-module.ts",
+        ".babelrc.js",
+        "tsconfig.json",
+        "tsconfig.declaration.json",
+        "global.d.ts",
+      ],
+      "ignoreUpdates": Object {
+        ".babelrc.js": false,
+        ".circleci/config.yml": false,
+        ".editorconfig": false,
+        ".eslintignore": false,
+        ".eslintrc.js": false,
+        ".gitignore": false,
+        ".huskyrc.js": false,
+        ".lintstagedrc.js": false,
+        ".npmrc": false,
+        ".prettierignore": false,
+        ".prettierrc.js": false,
+        ".yarnrc": false,
+        "CHANGELOG.md": true,
+        "README.md": true,
+        "appveyor.yml": false,
+        "global.d.ts": true,
+        "jest.config.js": false,
+        "src/preset-node-module.ts": true,
+        "tsconfig.declaration.json": false,
+        "tsconfig.json": false,
+        "wallaby.config.js": false,
+      },
+    },
+    "makeDirs": Array [
+      ".circleci",
+      "dist",
+      "src",
+    ],
+    "src": Object {
+      "absolute": Object {
+        "lib/files/CHANGELOG.md": "<PROJECT_ROOT>/lib/files/CHANGELOG.md",
+        "lib/files/README.md": "<PROJECT_ROOT>/lib/files/README.md",
+        "lib/files/babel-typescript.js": "<PROJECT_ROOT>/lib/files/babel-typescript.js",
+        "lib/files/editorconfig": "<PROJECT_ROOT>/lib/files/editorconfig",
+        "lib/files/gitignore": "<PROJECT_ROOT>/lib/files/gitignore",
+        "lib/files/global.d.ts": "<PROJECT_ROOT>/lib/files/global.d.ts",
+        "lib/files/npmrc": "<PROJECT_ROOT>/lib/files/npmrc",
+        "lib/files/package-entry.js": "<PROJECT_ROOT>/lib/files/package-entry.js",
+        "lib/files/tsconfig.declaration.json": "<PROJECT_ROOT>/lib/files/tsconfig.declaration.json",
+        "lib/files/tsconfig.json": "<PROJECT_ROOT>/lib/files/tsconfig.json",
+        "lib/files/yarnrc": "<PROJECT_ROOT>/lib/files/yarnrc",
+        "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-git-hooks/lib/files/husky.js",
+        "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/jest.js",
+        "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib/files/wallaby.js",
+        "node_modules/@backtrack/preset-style/lib/files/eslint.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/eslint.js",
+        "node_modules/@backtrack/preset-style/lib/files/ignore": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/ignore",
+        "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
+        "node_modules/@backtrack/preset-style/lib/files/prettier.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/prettier.js",
+      },
+      "files": Array [
+        "node_modules/@backtrack/preset-style/lib/files/ignore",
+        "node_modules/@backtrack/preset-style/lib/files/prettier.js",
+        "node_modules/@backtrack/preset-style/lib/files/ignore",
+        "node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
+        "node_modules/@backtrack/preset-style/lib/files/eslint.js",
+        "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js",
+        "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml",
+        "node_modules/@backtrack/preset-jest/lib/files/wallaby.js",
+        "node_modules/@backtrack/preset-jest/lib/files/jest.js",
+        "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml",
+        "lib/files/CHANGELOG.md",
+        "lib/files/README.md",
+        "lib/files/editorconfig",
+        "lib/files/gitignore",
+        "lib/files/npmrc",
+        "lib/files/yarnrc",
+        "lib/files/package-entry.js",
+        "lib/files/babel-typescript.js",
+        "lib/files/tsconfig.json",
+        "lib/files/tsconfig.declaration.json",
+        "lib/files/global.d.ts",
+      ],
+      "hash": Object {
+        "lib/files/CHANGELOG.md": "ignoreUpdates",
+        "lib/files/README.md": "ignoreUpdates",
+        "lib/files/babel-typescript.js": "6b00dcb93fd6046ba431aff123f530113043299e83320f3f420388c9f4b5b0a3",
+        "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
+        "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
+        "lib/files/global.d.ts": "ignoreUpdates",
+        "lib/files/npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
+        "lib/files/package-entry.js": "ignoreUpdates",
+        "lib/files/tsconfig.declaration.json": "f29b914b471d9a5bbb231fa43c87235a8f44271edd11436f6ccec779e9e55957",
+        "lib/files/tsconfig.json": "afecd787ab1919b8d4f0f9873f1f3b2ef989b83fc7cc7c3348cefb0a219cd104",
+        "lib/files/yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3",
+        "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js": "f7b6f2abb505e7b45fb028edb1a032b9fb7c997e4d563fdd0567beb582f8da76",
+        "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
+        "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml": "f8afa0de22d1ce5ee659b86993cf898e85b383599dab0f06ef052d1f4510ef37",
+        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "89b921f7f379662d979221ac8124f85a5c2443a66f5d6922babf18e67b0f5727",
+        "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "fb18cd12a40eb4e2e311d8ea67b1c6a04eb2af3486e1363419eff4cd36a39cc8",
+        "node_modules/@backtrack/preset-style/lib/files/eslint.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
+        "node_modules/@backtrack/preset-style/lib/files/ignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
+        "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "c8dd8df94d9c8de4503bc1ab4b4ea12c7450d76ebbd50c9b4c3c7975609e28da",
+        "node_modules/@backtrack/preset-style/lib/files/prettier.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
+      },
+    },
+  },
+  "format": Array [
+    "prettier **/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml} --write",
+  ],
+  "git-pre-commit": Array [
+    [Function noop],
+    "lint-staged",
+    [Function noop],
+  ],
+  "git-pre-push": Array [
+    [Function noop],
+    "backtrack lint",
+    [Function noop],
+    "backtrack test",
+    "backtrack build",
+    "backtrack typescript",
+  ],
+  "lint": Array [
+    "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
+  ],
+  "lint.fix": Array [
+    "eslint --ext .js,.jsx,.mjs,.ts,.tsx --fix .",
+  ],
+  "packageJson": Array [
+    Object {
+      "scripts": Object {
+        "test.update": "jest --updateSnapshot",
+        "test.watch": "jest --watch",
+      },
+    },
+    Object {
+      "engines": Object {
+        "node": ">=6.9.0",
+        "npm": ">=3.10.10",
+      },
+      "files": Array [
+        "dist/",
+      ],
+      "main": "dist/preset-node-module.js",
+    },
+  ],
+  "prepublishOnly": Array [
+    "backtrack lint",
+    "backtrack test",
+    "backtrack build",
+    "backtrack typescript",
+  ],
+  "resolve": Object {
+    "@backtrack/preset-git-hooks": "<PROJECT_ROOT>/node_modules/@backtrack/preset-git-hooks/lib",
+    "@backtrack/preset-jest": "<PROJECT_ROOT>/node_modules/@backtrack/preset-jest/lib",
+    "@backtrack/preset-node-module": "<PROJECT_ROOT>/lib",
+    "@backtrack/preset-style": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib",
+  },
+  "test": Array [
+    "jest --passWithNoTests",
+  ],
+  "test.ci": Array [
+    "jest --passWithNoTests --ci --no-cache --coverage --maxWorkers 2",
+    Object {
+      "name": "codecov",
+      "task": "codecov",
+    },
+  ],
+  "test.ci-pretest": Array [
+    [Function noop],
+    "backtrack build",
+    "backtrack lint",
+    "backtrack typescript",
+  ],
+  "typescript": Array [
+    "tsc",
   ],
 }
 `;

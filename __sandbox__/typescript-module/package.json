@@ -1,5 +1,5 @@
 {
-  "name": "flow-module",
+  "name": "typescript-module",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -10,15 +10,13 @@
     "npm": ">=3.10.10"
   },
   "files": [
-    "dist/",
-    "flow-typed/"
+    "dist/"
   ],
-  "main": "dist/flow-module.js",
+  "main": "dist/typescript-module.js",
   "scripts": {
     "build": "backtrack build --production",
     "clean": "backtrack clean",
     "dev": "backtrack dev --development",
-    "flow": "backtrack flow",
     "format": "backtrack format",
     "git-pre-commit": "backtrack git-pre-commit",
     "git-pre-push": "backtrack git-pre-push",
@@ -29,7 +27,8 @@
     "test.ci": "backtrack test.ci",
     "test.ci-pretest": "backtrack test.ci-pretest",
     "test.update": "jest --updateSnapshot",
-    "test.watch": "jest --watch"
+    "test.watch": "jest --watch",
+    "typescript": "backtrack typescript"
   },
   "lint-staged": {
     "*.{js,md,json}": [
@@ -39,7 +38,9 @@
   },
   "devDependencies": {
     "@backtrack/core": "^0.1.20",
-    "flow-bin": "^0.80.0"
+    "@types/jest": "^23.3.12",
+    "@types/node": "^10.12.18",
+    "typescript": "^3.2.2"
   },
   "dependencies": {
     "@backtrack/preset-node-module": "file:../.."

@@ -6,7 +6,7 @@
             "src"
         ],
         "files": {
-            ".babelrc.js": "ff60de6d04ab27b510046e61af616a6cca8b4394ae55b973d63c8b3f8a6ee07b",
+            ".babelrc.js": "6b00dcb93fd6046ba431aff123f530113043299e83320f3f420388c9f4b5b0a3",
             ".circleci/config.yml": "f8afa0de22d1ce5ee659b86993cf898e85b383599dab0f06ef052d1f4510ef37",
             ".editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
             ".eslintignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
@@ -21,8 +21,11 @@
             "CHANGELOG.md": "ignoreUpdates",
             "README.md": "ignoreUpdates",
             "appveyor.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
+            "global.d.ts": "ignoreUpdates",
             "jest.config.js": "89b921f7f379662d979221ac8124f85a5c2443a66f5d6922babf18e67b0f5727",
-            "src/babel-module.js": "ignoreUpdates",
+            "src/typescript-module.ts": "ignoreUpdates",
+            "tsconfig.declaration.json": "f29b914b471d9a5bbb231fa43c87235a8f44271edd11436f6ccec779e9e55957",
+            "tsconfig.json": "afecd787ab1919b8d4f0f9873f1f3b2ef989b83fc7cc7c3348cefb0a219cd104",
             "wallaby.config.js": "fb18cd12a40eb4e2e311d8ea67b1c6a04eb2af3486e1363419eff4cd36a39cc8"
         }
     },
@@ -34,7 +37,7 @@
         "files": [
             "dist/"
         ],
-        "main": "dist/babel-module.js",
+        "main": "dist/typescript-module.js",
         "scripts": {
             "build": "backtrack build --production",
             "clean": "backtrack clean",
@@ -49,7 +52,8 @@
             "test.ci": "backtrack test.ci",
             "test.ci-pretest": "backtrack test.ci-pretest",
             "test.update": "jest --updateSnapshot",
-            "test.watch": "jest --watch"
+            "test.watch": "jest --watch",
+            "typescript": "backtrack typescript"
         }
     }
 }
