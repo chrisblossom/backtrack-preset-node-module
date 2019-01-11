@@ -137,7 +137,7 @@ Object {
       "absolute": Object {
         "lib/files/CHANGELOG.md": "<PROJECT_ROOT>/lib/files/CHANGELOG.md",
         "lib/files/README.md": "<PROJECT_ROOT>/lib/files/README.md",
-        "lib/files/babel-basic.js": "<PROJECT_ROOT>/lib/files/babel-basic.js",
+        "lib/files/babel.js": "<PROJECT_ROOT>/lib/files/babel.js",
         "lib/files/editorconfig": "<PROJECT_ROOT>/lib/files/editorconfig",
         "lib/files/gitignore": "<PROJECT_ROOT>/lib/files/gitignore",
         "lib/files/npmrc": "<PROJECT_ROOT>/lib/files/npmrc",
@@ -170,13 +170,13 @@ Object {
         "lib/files/gitignore",
         "lib/files/npmrc",
         "lib/files/yarnrc",
-        "lib/files/babel-basic.js",
+        "lib/files/babel.js",
         "lib/files/package-entry.js",
       ],
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babel-basic.js": "fdc90244dc1d6cc36b6b3c91858ad1a2261e761c146e440f159e86a4ca1710b8",
+        "lib/files/babel.js": "0d67470127273083075e12034e65050fac6ee146fbabd903300b011a3ad7d6ef",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
         "lib/files/npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
@@ -513,6 +513,11 @@ Object {
   },
   "config": Array [
     Object {
+      "babel": Object {
+        "presets": Array [
+          "<PROJECT_ROOT>/node_modules/@babel/preset-flow/lib/index.js",
+        ],
+      },
       "eslint": Object {
         "overrides": Array [
           Object {
@@ -647,7 +652,7 @@ Object {
       "absolute": Object {
         "lib/files/CHANGELOG.md": "<PROJECT_ROOT>/lib/files/CHANGELOG.md",
         "lib/files/README.md": "<PROJECT_ROOT>/lib/files/README.md",
-        "lib/files/babel-flow.js": "<PROJECT_ROOT>/lib/files/babel-flow.js",
+        "lib/files/babel.js": "<PROJECT_ROOT>/lib/files/babel.js",
         "lib/files/editorconfig": "<PROJECT_ROOT>/lib/files/editorconfig",
         "lib/files/flowconfig": "<PROJECT_ROOT>/lib/files/flowconfig",
         "lib/files/gitignore": "<PROJECT_ROOT>/lib/files/gitignore",
@@ -685,12 +690,12 @@ Object {
         "lib/files/package-entry-flow.js",
         "lib/files/flowconfig",
         "lib/files/jest.flow",
-        "lib/files/babel-flow.js",
+        "lib/files/babel.js",
       ],
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babel-flow.js": "3af25a40643ae330931efb227a65bc689b06c370551caa10e07576d4eb5adb02",
+        "lib/files/babel.js": "0d67470127273083075e12034e65050fac6ee146fbabd903300b011a3ad7d6ef",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/flowconfig": "a097b005abea75e2e62d08a1cdbf12263aa9e5c220be921f7992a1cbc1e1bd18",
         "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
@@ -812,6 +817,11 @@ Object {
   },
   "config": Array [
     Object {
+      "babel": Object {
+        "presets": Array [
+          "<PROJECT_ROOT>/node_modules/@babel/preset-typescript/lib/index.js",
+        ],
+      },
       "eslint": Object {
         "overrides": Array [
           Object {
@@ -948,7 +958,7 @@ Object {
       "absolute": Object {
         "lib/files/CHANGELOG.md": "<PROJECT_ROOT>/lib/files/CHANGELOG.md",
         "lib/files/README.md": "<PROJECT_ROOT>/lib/files/README.md",
-        "lib/files/babel-typescript.js": "<PROJECT_ROOT>/lib/files/babel-typescript.js",
+        "lib/files/babel.js": "<PROJECT_ROOT>/lib/files/babel.js",
         "lib/files/editorconfig": "<PROJECT_ROOT>/lib/files/editorconfig",
         "lib/files/gitignore": "<PROJECT_ROOT>/lib/files/gitignore",
         "lib/files/global.d.ts": "<PROJECT_ROOT>/lib/files/global.d.ts",
@@ -985,7 +995,7 @@ Object {
         "lib/files/npmrc",
         "lib/files/yarnrc",
         "lib/files/package-entry.js",
-        "lib/files/babel-typescript.js",
+        "lib/files/babel.js",
         "lib/files/tsconfig.json",
         "lib/files/tsconfig.declaration.json",
         "lib/files/global.d.ts",
@@ -993,7 +1003,7 @@ Object {
       "hash": Object {
         "lib/files/CHANGELOG.md": "ignoreUpdates",
         "lib/files/README.md": "ignoreUpdates",
-        "lib/files/babel-typescript.js": "6b00dcb93fd6046ba431aff123f530113043299e83320f3f420388c9f4b5b0a3",
+        "lib/files/babel.js": "0d67470127273083075e12034e65050fac6ee146fbabd903300b011a3ad7d6ef",
         "lib/files/editorconfig": "65c8c6dd2b55cd63f7a55d2ed77bb1344a345ed651c5b0a1cb689fa95753e63d",
         "lib/files/gitignore": "715c4f869d50d4e11254a97441df027e6cabd50612d10e844e5efba4078f484f",
         "lib/files/global.d.ts": "ignoreUpdates",

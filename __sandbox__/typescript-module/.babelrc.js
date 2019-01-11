@@ -29,7 +29,6 @@ const babel = {
                 useBuiltIns: 'entry',
             },
         ],
-        pkg.resolve(backtrackId, '@babel/preset-typescript'),
     ],
     plugins: [
         pkg.resolve(backtrackId, 'babel-plugin-dynamic-import-node'),
