@@ -61,6 +61,7 @@
     "cross-spawn": "^6.0.5",
     "del": "^3.0.0",
     "flow-copy-source": "^2.0.2",
-    "read-pkg": "^4.0.1"
+    "read-pkg": "^4.0.1",
+    "recursive-copy": "^2.0.9"
   }
 }

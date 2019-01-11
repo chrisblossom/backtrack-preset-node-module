@@ -4,10 +4,16 @@ exports[`babel: true 1`] = `
 Object {
   "build": Array [
     "backtrack clean",
-    Object {
-      "name": "babel",
-      "task": [Function task],
-    },
+    Array [
+      Object {
+        "name": "babel",
+        "task": [Function task],
+      },
+      Object {
+        "name": "copy files",
+        "task": [Function task],
+      },
+    ],
   ],
   "clean": Object {
     "copy": Array [],
@@ -38,10 +44,16 @@ Object {
   ],
   "dev": Array [
     "backtrack clean",
-    Object {
-      "name": "babel",
-      "task": [Function task],
-    },
+    Array [
+      Object {
+        "name": "babel",
+        "task": [Function task],
+      },
+      Object {
+        "name": "copy files",
+        "task": [Function task],
+      },
+    ],
     [Function anonymous],
     [Function anonymous],
   ],
@@ -502,6 +514,10 @@ Object {
         "name": "flow-copy-source",
         "task": [Function task],
       },
+      Object {
+        "name": "copy files",
+        "task": [Function task],
+      },
     ],
   ],
   "clean": Object {
@@ -545,6 +561,10 @@ Object {
       },
       Object {
         "name": "flow-copy-source",
+        "task": [Function task],
+      },
+      Object {
+        "name": "copy files",
         "task": [Function task],
       },
     ],
@@ -803,8 +823,12 @@ Object {
         "task": [Function task],
       },
       Object {
-        "name": "typescript declarations",
+        "name": "generate typescript declarations",
         "task": "tsc --project tsconfig.declaration.json",
+      },
+      Object {
+        "name": "copy files",
+        "task": [Function task],
       },
     ],
   ],
@@ -847,10 +871,16 @@ Object {
   ],
   "dev": Array [
     "backtrack clean",
-    Object {
-      "name": "babel",
-      "task": [Function task],
-    },
+    Array [
+      Object {
+        "name": "babel",
+        "task": [Function task],
+      },
+      Object {
+        "name": "copy files",
+        "task": [Function task],
+      },
+    ],
     [Function anonymous],
     [Function anonymous],
   ],
