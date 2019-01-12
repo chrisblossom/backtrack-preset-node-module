@@ -11,15 +11,17 @@
 
 ## Features
 
--   [`babel`](https://babeljs.io/) with [`babel-preset-env`](https://babeljs.io/docs/plugins/preset-env/) targeting [`node v6.9.0`](./lib/files/babelrc.js)
--   [`flow`](https://flow.org/), [`eslint`](https://eslint.org/), and [`prettier`](https://prettier.io)
--   [`jest`](https://facebook.github.io/jest/) with [CircleCI](https://circleci.com/) and [AppVeyor](https://www.appveyor.com/)
--   `package.json` scripts `build` and `dev`
--   `prepush` and `prepublish` `git hooks`
+-   [`jest`](https://facebook.github.io/jest/) with [Wallaby.js](https://wallabyjs.com/), [CircleCI](https://circleci.com/) and [AppVeyor](https://www.appveyor.com/)
+-   [`eslint`](https://eslint.org/), and [`prettier`](https://prettier.io)
+-   `package.json` scripts
+-   `git-pre-push`, `git-pre-commit` and `prepublish` hooks
+-   Optional: [`babel`](https://babeljs.io) with [`babel-preset-env`](https://babeljs.io/docs/plugins/preset-env/)
+-   Optional: [`typescript`](http://www.typescriptlang.org)
+-   Optional: [`flow`](https://flow.org)
 
 ## Installation
 
-`npm install --save-dev @backtrack/preset-node-module flow-bin`
+`npm install --save-dev @backtrack/preset-node-module`
 
 ## Usage
 
@@ -44,11 +46,27 @@ module.exports = {
             '@backtrack/node-module',
             {
                 /**
-                 * Disable flow
+                 * Enable Babel using @babel/preset-env
                  *
-                 * default: true
+                 * default: false
                  */
-                flow: false,
+                babel: true,
+
+                /**
+                 * Enable Typescript
+                 * Additional requirement: npm install --save-dev typescript
+                 *
+                 * default: false
+                 */
+                typescript: true,
+
+                /**
+                 * Enable flow
+                 * Additional requirement: npm install --save-dev flow-bin
+                 *
+                 * default: false
+                 */
+                flow: true,
 
                 /**
                  * Use node >=8.9.0
