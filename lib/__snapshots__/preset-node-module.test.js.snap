@@ -24,6 +24,29 @@ Object {
   },
   "config": Array [
     Object {
+      "prettier": Object {
+        "overrides": Array [
+          Object {
+            "excludeFiles": "*/**",
+            "files": "*.js",
+            "options": Object {
+              "trailingComma": "es5",
+            },
+          },
+          Object {
+            "files": Array [
+              "lib/**/*.js",
+              "app/**/*.js",
+              "**/__sandbox__/**/*.js",
+            ],
+            "options": Object {
+              "trailingComma": "es5",
+            },
+          },
+        ],
+      },
+    },
+    Object {
       "eslint": Object {
         "overrides": Array [
           Object {
@@ -101,10 +124,10 @@ Object {
       },
       "files": Array [
         ".eslintignore",
-        ".prettierrc.js",
         ".prettierignore",
         ".lintstagedrc.js",
         ".eslintrc.js",
+        ".prettierrc.js",
         ".huskyrc.js",
         ".circleci/config.yml",
         "wallaby.config.js",
@@ -167,10 +190,10 @@ Object {
       },
       "files": Array [
         "node_modules/@backtrack/preset-style/lib/files/ignore",
-        "node_modules/@backtrack/preset-style/lib/files/prettier.js",
         "node_modules/@backtrack/preset-style/lib/files/ignore",
         "node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
         "node_modules/@backtrack/preset-style/lib/files/eslint.js",
+        "node_modules/@backtrack/preset-style/lib/files/prettier.js",
         "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js",
         "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js",
@@ -202,12 +225,12 @@ Object {
         "node_modules/@backtrack/preset-style/lib/files/eslint.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
         "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "c8dd8df94d9c8de4503bc1ab4b4ea12c7450d76ebbd50c9b4c3c7975609e28da",
-        "node_modules/@backtrack/preset-style/lib/files/prettier.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
+        "node_modules/@backtrack/preset-style/lib/files/prettier.js": "37f4f9d099f0dc6e9d2018d8a0c98cc8fc21245232506d0cd57135f84858a737",
       },
     },
   },
   "format": Array [
-    "prettier **/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml} --write",
+    "prettier \\"**/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml}\\" --write",
   ],
   "git-pre-commit": Array [
     [Function noop],
@@ -275,6 +298,9 @@ Object {
 
 exports[`basic node 1`] = `
 Object {
+  "config": Array [
+    Object {},
+  ],
   "files": Object {
     "dest": Object {
       "absolute": Object {
@@ -317,10 +343,10 @@ Object {
       },
       "files": Array [
         ".eslintignore",
-        ".prettierrc.js",
         ".prettierignore",
         ".lintstagedrc.js",
         ".eslintrc.js",
+        ".prettierrc.js",
         ".huskyrc.js",
         ".circleci/config.yml",
         "wallaby.config.js",
@@ -375,14 +401,14 @@ Object {
         "node_modules/@backtrack/preset-style/lib/files/eslint-node.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/eslint-node.js",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/ignore",
         "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
-        "node_modules/@backtrack/preset-style/lib/files/prettier.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/prettier.js",
+        "node_modules/@backtrack/preset-style/lib/files/prettier-es5.js": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib/files/prettier-es5.js",
       },
       "files": Array [
         "node_modules/@backtrack/preset-style/lib/files/ignore",
-        "node_modules/@backtrack/preset-style/lib/files/prettier.js",
         "node_modules/@backtrack/preset-style/lib/files/ignore",
         "node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
         "node_modules/@backtrack/preset-style/lib/files/eslint-node.js",
+        "node_modules/@backtrack/preset-style/lib/files/prettier-es5.js",
         "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js",
         "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js",
@@ -412,12 +438,12 @@ Object {
         "node_modules/@backtrack/preset-style/lib/files/eslint-node.js": "577797f39cbdc5d8242dc8da8564a2faca5ed926b1c8f651167240d790034ee8",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
         "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "c8dd8df94d9c8de4503bc1ab4b4ea12c7450d76ebbd50c9b4c3c7975609e28da",
-        "node_modules/@backtrack/preset-style/lib/files/prettier.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
+        "node_modules/@backtrack/preset-style/lib/files/prettier-es5.js": "c179f1962a1c7f0500cba01f9a68a3234882096fb7b3c2385b9d4779e4aebb83",
       },
     },
   },
   "format": Array [
-    "prettier **/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml} --write",
+    "prettier \\"**/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml}\\" --write",
   ],
   "git-pre-commit": Array [
     [Function noop],
@@ -529,6 +555,29 @@ Object {
   },
   "config": Array [
     Object {
+      "prettier": Object {
+        "overrides": Array [
+          Object {
+            "excludeFiles": "*/**",
+            "files": "*.js",
+            "options": Object {
+              "trailingComma": "es5",
+            },
+          },
+          Object {
+            "files": Array [
+              "lib/**/*.js",
+              "app/**/*.js",
+              "**/__sandbox__/**/*.js",
+            ],
+            "options": Object {
+              "trailingComma": "es5",
+            },
+          },
+        ],
+      },
+    },
+    Object {
       "babel": Object {
         "presets": Array [
           "<PROJECT_ROOT>/node_modules/@babel/preset-flow/lib/index.js",
@@ -619,10 +668,10 @@ Object {
       },
       "files": Array [
         ".eslintignore",
-        ".prettierrc.js",
         ".prettierignore",
         ".lintstagedrc.js",
         ".eslintrc.js",
+        ".prettierrc.js",
         ".huskyrc.js",
         ".circleci/config.yml",
         "wallaby.config.js",
@@ -692,10 +741,10 @@ Object {
       },
       "files": Array [
         "node_modules/@backtrack/preset-style/lib/files/ignore",
-        "node_modules/@backtrack/preset-style/lib/files/prettier.js",
         "node_modules/@backtrack/preset-style/lib/files/ignore",
         "node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
         "node_modules/@backtrack/preset-style/lib/files/eslint.js",
+        "node_modules/@backtrack/preset-style/lib/files/prettier.js",
         "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js",
         "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js",
@@ -731,7 +780,7 @@ Object {
         "node_modules/@backtrack/preset-style/lib/files/eslint.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
         "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "c8dd8df94d9c8de4503bc1ab4b4ea12c7450d76ebbd50c9b4c3c7975609e28da",
-        "node_modules/@backtrack/preset-style/lib/files/prettier.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
+        "node_modules/@backtrack/preset-style/lib/files/prettier.js": "37f4f9d099f0dc6e9d2018d8a0c98cc8fc21245232506d0cd57135f84858a737",
       },
     },
   },
@@ -739,7 +788,7 @@ Object {
     "flow",
   ],
   "format": Array [
-    "prettier **/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml} --write",
+    "prettier \\"**/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml}\\" --write",
   ],
   "git-pre-commit": Array [
     [Function noop],
@@ -841,6 +890,29 @@ Object {
   },
   "config": Array [
     Object {
+      "prettier": Object {
+        "overrides": Array [
+          Object {
+            "excludeFiles": "*/**",
+            "files": "*.js",
+            "options": Object {
+              "trailingComma": "es5",
+            },
+          },
+          Object {
+            "files": Array [
+              "lib/**/*.js",
+              "app/**/*.js",
+              "**/__sandbox__/**/*.js",
+            ],
+            "options": Object {
+              "trailingComma": "es5",
+            },
+          },
+        ],
+      },
+    },
+    Object {
       "babel": Object {
         "presets": Array [
           "<PROJECT_ROOT>/node_modules/@babel/preset-typescript/lib/index.js",
@@ -934,10 +1006,10 @@ Object {
       },
       "files": Array [
         ".eslintignore",
-        ".prettierrc.js",
         ".prettierignore",
         ".lintstagedrc.js",
         ".eslintrc.js",
+        ".prettierrc.js",
         ".huskyrc.js",
         ".circleci/config.yml",
         "wallaby.config.js",
@@ -1009,10 +1081,10 @@ Object {
       },
       "files": Array [
         "node_modules/@backtrack/preset-style/lib/files/ignore",
-        "node_modules/@backtrack/preset-style/lib/files/prettier.js",
         "node_modules/@backtrack/preset-style/lib/files/ignore",
         "node_modules/@backtrack/preset-style/lib/files/lint-staged.js",
         "node_modules/@backtrack/preset-style/lib/files/eslint.js",
+        "node_modules/@backtrack/preset-style/lib/files/prettier.js",
         "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js",
         "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js",
@@ -1050,12 +1122,12 @@ Object {
         "node_modules/@backtrack/preset-style/lib/files/eslint.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
         "node_modules/@backtrack/preset-style/lib/files/lint-staged.js": "c8dd8df94d9c8de4503bc1ab4b4ea12c7450d76ebbd50c9b4c3c7975609e28da",
-        "node_modules/@backtrack/preset-style/lib/files/prettier.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
+        "node_modules/@backtrack/preset-style/lib/files/prettier.js": "37f4f9d099f0dc6e9d2018d8a0c98cc8fc21245232506d0cd57135f84858a737",
       },
     },
   },
   "format": Array [
-    "prettier **/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml} --write",
+    "prettier \\"**/*.{js,mjs,jsx,ts,tsx,json,scss,less,css,md,yml,yaml}\\" --write",
   ],
   "git-pre-commit": Array [
     [Function noop],
