@@ -40,9 +40,9 @@
     "@backtrack/core": "^0.1.23",
     "@backtrack/preset-preset": "^0.3.15",
     "execa": "^1.0.0",
-    "read-dir-deep": "^3.0.0",
+    "read-dir-deep": "^4.0.2",
     "strip-ansi": "^5.0.0",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.4"
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",
@@ -52,7 +52,7 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-typescript": "^7.1.0",
-    "@backtrack/preset-jest": "^0.5.0",
+    "@backtrack/preset-jest": "^0.5.5",
     "@backtrack/preset-style": "^0.1.22",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
