@@ -931,8 +931,12 @@ Object {
       },
       "jest": Object {
         "moduleFileExtensions": Array [
-          "js",
           "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node",
         ],
         "testRegex": "(/__tests__/.*|(/.|/)(test|spec))/.(jsx?|tsx?)$",
         "transform": Object {
