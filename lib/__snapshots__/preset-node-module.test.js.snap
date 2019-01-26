@@ -58,11 +58,6 @@ Object {
           },
         ],
       },
-      "jest": Object {
-        "transform": Object {
-          "^.+/.(tsx?|jsx?)$": "<PROJECT_ROOT>/lib/jest-babel-transform.js",
-        },
-      },
     },
   ],
   "dev": Array [
@@ -220,7 +215,7 @@ Object {
         "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js": "f7b6f2abb505e7b45fb028edb1a032b9fb7c997e4d563fdd0567beb582f8da76",
         "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
         "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml": "f8afa0de22d1ce5ee659b86993cf898e85b383599dab0f06ef052d1f4510ef37",
-        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "9159ffa899d77032ff0f3137357c814dd63e947207be51e6df57e42e1e44019d",
+        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "593effcf28fda7ec31763c898d739f665436e659b7976864ce78885282136401",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "2656c547b42344e044e4a04d211059882aa4ab616f46051bbf994a018be2b9ec",
         "node_modules/@backtrack/preset-style/lib/files/eslint.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
@@ -252,7 +247,7 @@ Object {
   "packageJson": Array [
     Object {
       "scripts": Object {
-        "test.update": "jest --updateSnapshot",
+        "test.update": "jest --update-snapshot",
         "test.watch": "jest --watch",
       },
     },
@@ -279,10 +274,10 @@ Object {
     "@backtrack/preset-style": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib",
   },
   "test": Array [
-    "jest --passWithNoTests",
+    "jest --pass-with-no-tests",
   ],
   "test.ci": Array [
-    "jest --passWithNoTests --ci --no-cache --coverage --maxWorkers 2",
+    "jest --pass-with-no-tests --ci --no-cache --coverage --max-workers 2",
     Object {
       "name": "codecov",
       "task": "codecov",
@@ -433,7 +428,7 @@ Object {
         "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js": "f7b6f2abb505e7b45fb028edb1a032b9fb7c997e4d563fdd0567beb582f8da76",
         "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
         "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml": "f8afa0de22d1ce5ee659b86993cf898e85b383599dab0f06ef052d1f4510ef37",
-        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "9159ffa899d77032ff0f3137357c814dd63e947207be51e6df57e42e1e44019d",
+        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "593effcf28fda7ec31763c898d739f665436e659b7976864ce78885282136401",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "2656c547b42344e044e4a04d211059882aa4ab616f46051bbf994a018be2b9ec",
         "node_modules/@backtrack/preset-style/lib/files/eslint-node.js": "577797f39cbdc5d8242dc8da8564a2faca5ed926b1c8f651167240d790034ee8",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
@@ -465,7 +460,7 @@ Object {
   "packageJson": Array [
     Object {
       "scripts": Object {
-        "test.update": "jest --updateSnapshot",
+        "test.update": "jest --update-snapshot",
         "test.watch": "jest --watch",
       },
     },
@@ -491,10 +486,10 @@ Object {
     "@backtrack/preset-style": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib",
   },
   "test": Array [
-    "jest --passWithNoTests",
+    "jest --pass-with-no-tests",
   ],
   "test.ci": Array [
-    "jest --passWithNoTests --ci --no-cache --coverage --maxWorkers 2",
+    "jest --pass-with-no-tests --ci --no-cache --coverage --max-workers 2",
     Object {
       "name": "codecov",
       "task": "codecov",
@@ -593,11 +588,6 @@ Object {
             },
           },
         ],
-      },
-      "jest": Object {
-        "transform": Object {
-          "^.+/.(tsx?|jsx?)$": "<PROJECT_ROOT>/lib/jest-babel-transform.js",
-        },
       },
     },
   ],
@@ -775,7 +765,7 @@ Object {
         "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js": "f7b6f2abb505e7b45fb028edb1a032b9fb7c997e4d563fdd0567beb582f8da76",
         "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
         "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml": "f8afa0de22d1ce5ee659b86993cf898e85b383599dab0f06ef052d1f4510ef37",
-        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "9159ffa899d77032ff0f3137357c814dd63e947207be51e6df57e42e1e44019d",
+        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "593effcf28fda7ec31763c898d739f665436e659b7976864ce78885282136401",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "2656c547b42344e044e4a04d211059882aa4ab616f46051bbf994a018be2b9ec",
         "node_modules/@backtrack/preset-style/lib/files/eslint.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
@@ -812,7 +802,7 @@ Object {
   "packageJson": Array [
     Object {
       "scripts": Object {
-        "test.update": "jest --updateSnapshot",
+        "test.update": "jest --update-snapshot",
         "test.watch": "jest --watch",
       },
     },
@@ -841,10 +831,10 @@ Object {
     "@backtrack/preset-style": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib",
   },
   "test": Array [
-    "jest --passWithNoTests",
+    "jest --pass-with-no-tests",
   ],
   "test.ci": Array [
-    "jest --passWithNoTests --ci --no-cache --coverage --maxWorkers 2",
+    "jest --pass-with-no-tests --ci --no-cache --coverage --max-workers 2",
     Object {
       "name": "codecov",
       "task": "codecov",
@@ -928,20 +918,6 @@ Object {
             },
           },
         ],
-      },
-      "jest": Object {
-        "moduleFileExtensions": Array [
-          "ts",
-          "tsx",
-          "js",
-          "json",
-          "jsx",
-          "node",
-        ],
-        "testRegex": "(/__tests__/.*|(/.|/)(test|spec))/.(jsx?|tsx?)$",
-        "transform": Object {
-          "^.+/.(tsx?|jsx?)$": "<PROJECT_ROOT>/lib/jest-babel-transform.js",
-        },
       },
     },
   ],
@@ -1121,7 +1097,7 @@ Object {
         "node_modules/@backtrack/preset-git-hooks/lib/files/husky.js": "f7b6f2abb505e7b45fb028edb1a032b9fb7c997e4d563fdd0567beb582f8da76",
         "node_modules/@backtrack/preset-jest/lib/files/appveyor-6+.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
         "node_modules/@backtrack/preset-jest/lib/files/circleci-6+.yml": "f8afa0de22d1ce5ee659b86993cf898e85b383599dab0f06ef052d1f4510ef37",
-        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "9159ffa899d77032ff0f3137357c814dd63e947207be51e6df57e42e1e44019d",
+        "node_modules/@backtrack/preset-jest/lib/files/jest.js": "593effcf28fda7ec31763c898d739f665436e659b7976864ce78885282136401",
         "node_modules/@backtrack/preset-jest/lib/files/wallaby.js": "2656c547b42344e044e4a04d211059882aa4ab616f46051bbf994a018be2b9ec",
         "node_modules/@backtrack/preset-style/lib/files/eslint.js": "0de8c62f28870b2afeb3eb58a5a9a106a96c9181aa9478f71760bb155bb4a205",
         "node_modules/@backtrack/preset-style/lib/files/ignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
@@ -1155,7 +1131,7 @@ Object {
   "packageJson": Array [
     Object {
       "scripts": Object {
-        "test.update": "jest --updateSnapshot",
+        "test.update": "jest --update-snapshot",
         "test.watch": "jest --watch",
       },
     },
@@ -1183,10 +1159,10 @@ Object {
     "@backtrack/preset-style": "<PROJECT_ROOT>/node_modules/@backtrack/preset-style/lib",
   },
   "test": Array [
-    "jest --passWithNoTests",
+    "jest --pass-with-no-tests",
   ],
   "test.ci": Array [
-    "jest --passWithNoTests --ci --no-cache --coverage --maxWorkers 2",
+    "jest --pass-with-no-tests --ci --no-cache --coverage --max-workers 2",
     Object {
       "name": "codecov",
       "task": "codecov",
