@@ -16,14 +16,14 @@
             ".lintstagedrc.js": "c8dd8df94d9c8de4503bc1ab4b4ea12c7450d76ebbd50c9b4c3c7975609e28da",
             ".npmrc": "f92bfc9e4d622a5c53c3fcd1b61206420f8dc666db99e57560c33ad2fdc80a47",
             ".prettierignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
-            ".prettierrc.js": "d30f794e5447d44ad2ed8a1123bc15fdaf6775ad7776f3c1411e3b965f3d3a20",
+            ".prettierrc.js": "37f4f9d099f0dc6e9d2018d8a0c98cc8fc21245232506d0cd57135f84858a737",
             ".yarnrc": "e4bdd4d0bcb6dd15e5585dc6fa2c90780abaf4904305afb12d9af02000e070f3",
             "CHANGELOG.md": "ignoreUpdates",
             "README.md": "ignoreUpdates",
             "appveyor.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
-            "jest.config.js": "89b921f7f379662d979221ac8124f85a5c2443a66f5d6922babf18e67b0f5727",
+            "jest.config.js": "593effcf28fda7ec31763c898d739f665436e659b7976864ce78885282136401",
             "src/babel-module.js": "ignoreUpdates",
-            "wallaby.config.js": "fb18cd12a40eb4e2e311d8ea67b1c6a04eb2af3486e1363419eff4cd36a39cc8"
+            "wallaby.config.js": "2656c547b42344e044e4a04d211059882aa4ab616f46051bbf994a018be2b9ec"
         }
     },
     "packageJson": {
@@ -48,7 +48,7 @@
             "test": "backtrack test",
             "test.ci": "backtrack test.ci",
             "test.ci-pretest": "backtrack test.ci-pretest",
-            "test.update": "jest --updateSnapshot",
+            "test.update": "jest --update-snapshot",
             "test.watch": "jest --watch"
         }
     }

@@ -17,21 +17,8 @@ const prettier = {
     semi: true,
     tabWidth: 4,
     singleQuote: true,
-    trailingComma: 'all',
+    trailingComma: 'es5',
     arrowParens: 'always',
-
-    /**
-     * Needed for Node v6 support
-     */
-    overrides: [
-        {
-            files: '*.js',
-            excludeFiles: '*/**',
-            options: {
-                trailingComma: 'es5',
-            },
-        },
-    ],
 };
 
 module.exports = configManager({

@@ -28,7 +28,7 @@
     "test": "backtrack test",
     "test.ci": "backtrack test.ci",
     "test.ci-pretest": "backtrack test.ci-pretest",
-    "test.update": "jest --updateSnapshot",
+    "test.update": "jest --update-snapshot",
     "test.watch": "jest --watch"
   },
   "lint-staged": {
