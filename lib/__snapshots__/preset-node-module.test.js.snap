@@ -28,7 +28,10 @@ Object {
         "overrides": Array [
           Object {
             "excludeFiles": "*/**",
-            "files": "*.js",
+            "files": Array [
+              "*.js",
+              ".*.js",
+            ],
             "options": Object {
               "trailingComma": "es5",
             },
@@ -36,8 +39,11 @@ Object {
           Object {
             "files": Array [
               "lib/**/*.js",
+              "lib/**/.*.js",
               "app/**/*.js",
+              "app/**/.*.js",
               "**/__sandbox__/**/*.js",
+              "**/__sandbox__/**/.*.js",
             ],
             "options": Object {
               "trailingComma": "es5",
@@ -554,7 +560,10 @@ Object {
         "overrides": Array [
           Object {
             "excludeFiles": "*/**",
-            "files": "*.js",
+            "files": Array [
+              "*.js",
+              ".*.js",
+            ],
             "options": Object {
               "trailingComma": "es5",
             },
@@ -562,8 +571,11 @@ Object {
           Object {
             "files": Array [
               "lib/**/*.js",
+              "lib/**/.*.js",
               "app/**/*.js",
+              "app/**/.*.js",
               "**/__sandbox__/**/*.js",
+              "**/__sandbox__/**/.*.js",
             ],
             "options": Object {
               "trailingComma": "es5",
@@ -884,7 +896,10 @@ Object {
         "overrides": Array [
           Object {
             "excludeFiles": "*/**",
-            "files": "*.js",
+            "files": Array [
+              "*.js",
+              ".*.js",
+            ],
             "options": Object {
               "trailingComma": "es5",
             },
@@ -892,8 +907,11 @@ Object {
           Object {
             "files": Array [
               "lib/**/*.js",
+              "lib/**/.*.js",
               "app/**/*.js",
+              "app/**/.*.js",
               "**/__sandbox__/**/*.js",
+              "**/__sandbox__/**/.*.js",
             ],
             "options": Object {
               "trailingComma": "es5",

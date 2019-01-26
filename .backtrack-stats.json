@@ -19,7 +19,7 @@
             "CHANGELOG.md": "ignoreUpdates",
             "README.md": "ignoreUpdates",
             "appveyor.yml": "251406424b8cb49b1a8858ef7eb521ae57856964625daed85b591692e8f98e15",
-            "jest.config.js": "9159ffa899d77032ff0f3137357c814dd63e947207be51e6df57e42e1e44019d",
+            "jest.config.js": "593effcf28fda7ec31763c898d739f665436e659b7976864ce78885282136401",
             "lib/preset-node-module.js": "ignoreUpdates",
             "lib/preset-node-module.test.js": "ignoreUpdates",
             "wallaby.config.js": "2656c547b42344e044e4a04d211059882aa4ab616f46051bbf994a018be2b9ec"
@@ -44,7 +44,7 @@
             "test": "backtrack test",
             "test.ci": "backtrack test.ci",
             "test.ci-pretest": "backtrack test.ci-pretest",
-            "test.update": "jest --updateSnapshot",
+            "test.update": "jest --update-snapshot",
             "test.watch": "jest --watch"
         }
     }
